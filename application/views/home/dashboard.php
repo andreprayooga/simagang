@@ -6,28 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo base_url('/assets/admin/fonts/icomoon/style.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/home/fonts/icomoon/style.css') ?>">
 
-    <link rel="stylesheet" href="<?php echo base_url('/assets/admin/css/bootstrap.min.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('/assets/admin/css/magnific-popup.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('/assets/admin/css/jquery-ui.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('/assets/admin/css/owl.carousel.min.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('/assets/admin/css/owl.theme.default.min.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('/assets/admin/css/bootstrap-datepicker.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('/assets/admin/css/animate.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/home/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/home/css/magnific-popup.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/home/css/jquery-ui.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/home/css/owl.carousel.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/home/css/owl.theme.default.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/home/css/bootstrap-datepicker.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/home/css/animate.css') ?>">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
     
     
     
-    <link rel="stylesheet" href="<?php echo base_url('/assets/admin/fonts/flaticon/font/flaticon.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/home/fonts/flaticon/font/flaticon.css') ?>">
   
-    <link rel="stylesheet" href="<?php echo base_url('/assets/admin/css/aos.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/home/css/aos.css') ?>">
 
-    <link rel="stylesheet" href="<?php echo base_url('/assets/admin/css/style.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/home/css/style.css') ?>">
     
   </head>
-  <body style="background-image: url('<?php echo base_url('assets/admin/images/bg.jpg'); ?>');">
+  <body style="background-image: url('<?php echo base_url('assets/home/images/bg.jpg'); ?>');">
   
   <div class="site-wrap">
 
@@ -128,7 +128,7 @@
           <div class="col-md-12 block-13 nav-direction-white">
             <div class="nonloop-block-13 owl-carousel">
               <div class="media-image">
-                <img src="<?php echo base_url('/assets/admin/images/img_1.jpg') ?>" alt="Image" class="img-fluid">
+                <img src="<?php echo base_url('/assets/home/images/img_1.jpg') ?>" alt="Image" class="img-fluid">
                 <div class="media-image-body">
                   <h2>Body Building</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
@@ -136,7 +136,7 @@
                 </div>
               </div>
               <div class="media-image">
-                <img src="<?php echo base_url('/assets/admin/images/img_2.jpg') ?>" alt="Image" class="img-fluid">
+                <img src="<?php echo base_url('/assets/home/images/img_2.jpg') ?>" alt="Image" class="img-fluid">
                 <div class="media-image-body">
                   <h2>Body Combat</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
@@ -144,7 +144,7 @@
                 </div>
               </div>
               <div class="media-image">
-                <img src="<?php echo base_url('/assets/admin/images/img_3.jpg') ?>" alt="Image" class="img-fluid">
+                <img src="<?php echo base_url('/assets/home/images/img_3.jpg') ?>" alt="Image" class="img-fluid">
                 <div class="media-image-body">
                   <h2>Push Up</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
@@ -152,7 +152,7 @@
                 </div>
               </div>
               <div class="media-image">
-                <img src="<?php echo base_url('/assets/admin/images/img_4.jpg') ?>" alt="Image" class="img-fluid">
+                <img src="<?php echo base_url('/assets/home/images/img_4.jpg') ?>" alt="Image" class="img-fluid">
                 <div class="media-image-body">
                   <h2>Weight Lifting</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
@@ -160,7 +160,7 @@
                 </div>
               </div>
               <div class="media-image">
-                <img src="<?php echo base_url('/assets/admin/images/img_5.jpg') ?>" alt="Image" class="img-fluid">
+                <img src="<?php echo base_url('/assets/home/images/img_5.jpg') ?>" alt="Image" class="img-fluid">
                 <div class="media-image-body">
                   <h2>Body Combat</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
@@ -168,7 +168,7 @@
                 </div>
               </div>
               <div class="media-image">
-                <img src="<?php echo base_url('/assets/admin/images/img_6.jpg') ?>" alt="Image" class="img-fluid">
+                <img src="<?php echo base_url('/assets/home/images/img_6.jpg') ?>" alt="Image" class="img-fluid">
                 <div class="media-image-body">
                   <h2>Body Combat</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
@@ -185,7 +185,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <p class="mb-5"><img src="<?php echo base_url('/assets/admin/images/img_1.jpg') ?>" alt="Image" class="img-fluid"></p>
+            <p class="mb-5"><img src="<?php echo base_url('/assets/home/images/img_1.jpg') ?>" alt="Image" class="img-fluid"></p>
           </div>
           <div class="col-lg-5 ml-auto">
             <h2 class="site-section-heading mb-3">The Club</h2>
@@ -197,7 +197,7 @@
       </div>
     </div>
 
-    <div class="site-section bg-image" style="background-image: url('<?php echo base_url('/assets/admin/images/bg_2.jpg'); ?>'); background-attachment: fixed">
+    <div class="site-section bg-image" style="background-image: url('<?php echo base_url('/assets/home/images/bg_2.jpg'); ?>'); background-attachment: fixed">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-12">
@@ -206,7 +206,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-7 text-center">
-            <img src="<?php echo base_url('/assets/admin/images/person_3.jpg') ?>" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
+            <img src="<?php echo base_url('/assets/home/images/person_3.jpg') ?>" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
             <h2 class="h5 mb-4 text-white">Shane Green</h2>
             <p class="text-white mb-5 lead">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita et aliquam fuga dicta amet ad laborum error recusandae, voluptatibus quam minima sed, saepe odio voluptatem. Sed unde hic, vitae fugiat.&rdquo;</p>
             <p><a href="#" class="btn btn-primary text-white">Make Me Your Trainer</a></p>
@@ -291,7 +291,7 @@
           <div class="p-5">
             <div class="d-flex block-testimony">
               <div class="person mr-3">
-                <img src="<?php echo base_url('/assets/admin/images/person_1.jpg') ?>" alt="Image" class="img-fluid rounded-circle">
+                <img src="<?php echo base_url('/assets/home/images/person_1.jpg') ?>" alt="Image" class="img-fluid rounded-circle">
               </div>
               <div>
                 <h2 class="h5">Katie Johnson</h2>
@@ -302,7 +302,7 @@
           <div class="p-5">
             <div class="d-flex block-testimony">
               <div class="person mr-3">
-                <img src="<?php echo base_url('/assets/admin/images/person_2.jpg') ?>" alt="Image" class="img-fluid rounded-circle">
+                <img src="<?php echo base_url('/assets/home/images/person_2.jpg') ?>" alt="Image" class="img-fluid rounded-circle">
               </div>
               <div>
                 <h2 class="h5">Jane Mars</h2>
@@ -313,7 +313,7 @@
           <div class="p-5">
             <div class="d-flex block-testimony">
               <div class="person mr-3">
-                <img src="<?php echo base_url('/assets/admin/images/person_3.jpg') ?>" alt="Image" class="img-fluid rounded-circle">
+                <img src="<?php echo base_url('/assets/home/images/person_3.jpg') ?>" alt="Image" class="img-fluid rounded-circle">
               </div>
               <div>
                 <h2 class="h5">Shane Holmes</h2>
@@ -324,7 +324,7 @@
           <div class="p-5">
             <div class="d-flex block-testimony">
               <div class="person mr-3">
-                <img src="<?php echo base_url('/assets/admin/images/person_4.jpg') ?>" alt="Image" class="img-fluid rounded-circle">
+                <img src="<?php echo base_url('/assets/home/images/person_4.jpg') ?>" alt="Image" class="img-fluid rounded-circle">
               </div>
               <div>
                 <h2 class="h5">Mark Johnson</h2>
@@ -404,17 +404,17 @@
     </footer>
   </div>
 
-  <script src="<?php echo base_url('/assets/admin/js/jquery-migrate-3.0.1.min.js') ?>"></script>
-  <script src="<?php echo base_url('/assets/admin/js/jquery-ui.js') ?>"></script>
-  <script src="<?php echo base_url('/assets/admin/js/popper.min.js') ?>"></script>
-  <script src="<?php echo base_url('/assets/admin/js/bootstrap.min.js') ?>"></script>
-  <script src="<?php echo base_url('/assets/admin/js/owl.carousel.min.js') ?>"></script>
-  <script src="<?php echo base_url('/assets/admin/js/jquery.stellar.min.js') ?>"></script>
-  <script src="<?php echo base_url('/assets/admin/js/jquery.countdown.min.js') ?>"></script>
-  <script src="<?php echo base_url('/assets/admin/js/jquery.magnific-popup.min.js') ?>"></script>
-  <script src="<?php echo base_url('/assets/admin/js/bootstrap-datepicker.min.js') ?>"></script>
-  <script src="<?php echo base_url('/assets/admin/js/aos.js') ?>"></script>
-  <script src="<?php echo base_url('/assets/admin/js/main.js') ?>"></script>
+  <script src="<?php echo base_url('/assets/home/js/jquery-migrate-3.0.1.min.js') ?>"></script>
+  <script src="<?php echo base_url('/assets/home/js/jquery-ui.js') ?>"></script>
+  <script src="<?php echo base_url('/assets/home/js/popper.min.js') ?>"></script>
+  <script src="<?php echo base_url('/assets/home/js/bootstrap.min.js') ?>"></script>
+  <script src="<?php echo base_url('/assets/home/js/owl.carousel.min.js') ?>"></script>
+  <script src="<?php echo base_url('/assets/home/js/jquery.stellar.min.js') ?>"></script>
+  <script src="<?php echo base_url('/assets/home/js/jquery.countdown.min.js') ?>"></script>
+  <script src="<?php echo base_url('/assets/home/js/jquery.magnific-popup.min.js') ?>"></script>
+  <script src="<?php echo base_url('/assets/home/js/bootstrap-datepicker.min.js') ?>"></script>
+  <script src="<?php echo base_url('/assets/home/js/aos.js') ?>"></script>
+  <script src="<?php echo base_url('/assets/home/js/main.js') ?>"></script>
 
   </body>
 </html>
