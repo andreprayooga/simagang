@@ -21,6 +21,8 @@
     <!--     Fonts and icons     -->
     <link href="<?= base_url('/assets/admin/css/font-awesome.css') ?>" rel="stylesheet" />
     <link href="<?= base_url('/assets/admin/css/google-roboto-300-700.css') ?>" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
@@ -176,6 +178,7 @@
 <script src="<?= base_url ('/assets/admin/js/material-dashboard.js') ?>"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="<?= base_url ('/assets/admin/js/demo.js') ?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
 <script type="text/javascript">
     $().ready(function() {
         demo.checkFullPageBackgroundImage();
