@@ -35,7 +35,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="">
-                        <a href="register.html">
+                        <a href="<?= base_url('index.php/Auth/auth_register') ?>">
                             <i class="material-icons">person_add</i> Register
                         </a>
                     </li>
