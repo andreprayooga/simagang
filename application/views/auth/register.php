@@ -45,7 +45,7 @@
                         </a>
                     </li>
                     <li class="">
-                        <a href="login.html">
+                        <a href="<?= base_url('index.php/Auth') ?>">
                             <i class="material-icons">fingerprint</i> Login
                         </a>
                     </li>
@@ -68,26 +68,26 @@
                                         <div class="form-group label-floating">
                                             <label class="control-label">
                                                 Email Address
-                                                <small>*</small>
+                                                <span class="star">*</span>
                                             </label>
                                             <input class="form-control" name="email" type="email" required="true" />
                                         </div>
                                         <div class="form-group label-floating">
                                             <label class="control-label">
                                                 Password
-                                                <small>*</small>
+                                                <span class="star">*</span>
                                             </label>
                                             <input class="form-control" name="password" id="registerPassword" type="password" required="true" />
                                         </div>
                                         <div class="form-group label-floating">
                                             <label class="control-label">
                                                 Confirm Password
-                                                <small>*</small>
+                                                <span class="star">*</span>
                                             </label>
                                             <input class="form-control" name="password_confirmation" id="registerPasswordConfirmation" type="password" required="true" equalTo="#registerPassword" />
                                         </div>
                                         <div class="category form-category">
-                                            <small>*</small> Required fields</div>
+                                            <span class="star">*</span> Required fields</div>
                                         <div class="form-footer text-right">
                                             <button type="submit" class="btn btn-rose btn-fill">Register</button>
                                         </div>

@@ -38,6 +38,10 @@
   box-sizing: border-box;
 }
 
+.star {
+  color: red;
+}
+
 .resize {
   width: auto;
   height: 30px;

@@ -21,6 +21,8 @@
 </head>
 
 <body>
+    <?php echo  validation_errors() ?>
+        <?php echo form_open('Login/login');?>
     <nav class="navbar navbar-primary navbar-transparent navbar-absolute">
         <div class="container">
             <div class="navbar-header">
@@ -63,19 +65,20 @@
                                     <div class="card-content">
                                         <h4 class="card-title">Login Form</h4>
                                         <div class="form-group label-floating">
-                                            <label class="control-label">Email Address
-                                                <star>*</star>
+                                            <label class="control-label">Username
+                                                <span class="star">*</span>
                                             </label>
-                                            <input class="form-control" name="email" type="text" email="true" required="true" />
+                                            <input class="form-control" name="username" type="text" required="true" id="username" autocomplete="off"/>
                                         </div>
                                         <div class="form-group label-floating">
                                             <label class="control-label">Password
-                                                <star>*</star>
+                                                <span class="star">*</span>
                                             </label>
-                                            <input class="form-control" name="password" type="password" required="true" />
+                                            <input class="form-control" name="password" type="password" id="password" required="true" />
                                         </div>
                                         <div class="category form-category">
-                                            <star>*</star> Required fields</div>
+                                            <span class="star">*</span> 
+                                            Required fields</div>
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-rose btn-fill btn-wd">Lets Go</button>
                                         </div>
@@ -126,6 +129,7 @@
             </footer>
         </div>
     </div>
+    <?php echo form_close(); ?>
 </body>
 <!--   Core JS Files   -->
 <script src="<?= base_url ('/assets/admin/js/jquery-3.1.1.min.js') ?>" type="text/javascript"></script>

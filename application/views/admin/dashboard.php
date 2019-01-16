@@ -213,6 +213,12 @@
                             <p>Calendar</p>
                         </a>
                     </li>
+                                        <li>
+                        <a href="<?= base_url('index.php/Login/logout') ?>">
+                            <i class="material-icons">date_range</i>
+                            <p>Logout</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
