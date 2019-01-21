@@ -35,9 +35,9 @@ class SiswaMagang extends CI_Controller {
 		$this->form_validation->set_rules('no_hp','no_hp',"required");
 		$this->form_validation->set_rules('password','password',"required");
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('admin/header');
-			$this->load->view('admin/siswa_magang/insert');
-			$this->load->view('admin/footer');
+			$this->load->view('admin/siswa/template/header');
+			$this->load->view('admin/siswa/insert');
+			$this->load->view('admin/siswa/template/footer');
 		} else {
 			$config['upload_path'] = './uploads/';
 			$config['allowed_types'] = 'gif|jpg|png';
@@ -49,14 +49,14 @@ class SiswaMagang extends CI_Controller {
 
 			if ( ! $this->upload->do_upload('foto')){
 				$error = array('error' => $this->upload->display_errors('<p class="text-danger">','</p>'));
-				$this->load->view('admin/header');
-				$this->load->view('admin/siswa_magang/insert',$error);
-				$this->load->view('admin/footer');
+				$this->load->view('admin/siswa/template/header');
+				$this->load->view('admin/siswa/insert',$error);
+				$this->load->view('admin/siswa/template/footer');
 			}
 			else{
 				$data = array('upload_data' => $this->upload->data());
-				$this->Siswa_magang_m->insert($data['upload_data']['file_name']);
-				redirect('Admin/Siswa_magang','refresh');
+				$this->SiswaModel->insert($data['upload_data']['file_name']);
+				redirect('Admin/SiswaMagang','refresh');
 			}
 
 
@@ -83,10 +83,10 @@ class SiswaMagang extends CI_Controller {
 
 
 		if ($this->form_validation->run() == FALSE) {
-			$data['siswa_magang'] = $this->Siswa_magang_m->get_id($id);
-			$this->load->view('admin/header');
-			$this->load->view('admin/siswa_magang/update', $data);
-			$this->load->view('admin/footer');
+			$data['siswa_magang'] = $this->SiswaModel->get_id($id);
+			$this->load->view('admin/siswa/template/header');
+			$this->load->view('admin/siswa/update',$data);
+			$this->load->view('admin/siswa/template/footer');
 		} else {
 			if ($_FILES['foto']['name'] != "") {
 				$config['upload_path'] = './uploads/';
@@ -99,20 +99,20 @@ class SiswaMagang extends CI_Controller {
 
 				if ( ! $this->upload->do_upload('foto')){
 
-					$data['siswa_magang'] = $this->Siswa_magang_m->get_id($id);
+					$data['siswa_magang'] = $this->SiswaModel->get_id($id);
 					$data['error'] = $this->upload->display_errors('<p class="text-danger">','</p>');
-					$this->load->view('admin/header');
-					$this->load->view('admin/siswa_magang/update', $data);
-					$this->load->view('admin/footer');
+					$this->load->view('admin/siswa/template/header');
+					$this->load->view('admin/siswa/update',$data);
+					$this->load->view('admin/siswa/template/footer');
 				}
 				else{
 					$up = array('upload_data' => $this->upload->data());
-					$this->Siswa_magang_m->update($id,$up['upload_data']['file_name']);
-					redirect('Admin/Siswa_magang','refresh');
+					$this->SiswaModel->update($id,$up['upload_data']['file_name']);
+					redirect('Admin/SiswaMagang','refresh');
 				}
 			}else{
-				$this->Siswa_magang_m->update($id,null);
-				redirect('Admin/Siswa_magang','refresh');
+				$this->SiswaModel->update($id,null);
+				redirect('Admin/SiswaMagang','refresh');
 			}
 
 		}

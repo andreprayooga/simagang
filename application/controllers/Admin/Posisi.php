@@ -23,9 +23,9 @@ class Posisi extends CI_Controller {
 		$this->form_validation->set_rules('fk_id_divisi','ID Divisi',"required");
 		$this->form_validation->set_rules('keterangan','Keterangan',"required");
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('admin/header');
+			$this->load->view('admin/posisi/template/header');
 			$this->load->view('admin/posisi/insert');
-			$this->load->view('admin/footer');
+			$this->load->view('admin/posisi/template/footer');
 		} else {
 			$this->Posisi_m->insert();
 			redirect('Admin/Posisi','refresh');
@@ -39,18 +39,18 @@ class Posisi extends CI_Controller {
 		$this->form_validation->set_rules('keterangan','Keterangan',"required");
 
 		if ($this->form_validation->run() == FALSE) {
-			$data['posisi_magang'] = $this->Posisi_m->get_id($id);
-			$this->load->view('admin/header');
-			$this->load->view('admin/posisi/update', $data);
-			$this->load->view('admin/footer');
+			$data['posisi_magang'] = $this->PosisiModel->get_id($id);
+			$this->load->view('admin/posisi/template/header');
+			$this->load->view('admin/posisi/update',$data);
+			$this->load->view('admin/posisi/template/footer');
 		} else {
-			$this->Posisi_m->update($id);
+			$this->PosisiModel->update($id);
 			redirect('Admin/Posisi','refresh');
 		}
 	}
 	public function delete($id)
 	{
-		$this->Posisi_m->delete($id);
+		$this->PosisiModel->delete($id);
 		redirect('Admin/Posisi','refresh');
 	}
 }

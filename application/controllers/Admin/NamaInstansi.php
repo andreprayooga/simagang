@@ -24,9 +24,9 @@ class NamaInstansi extends CI_Controller {
 		$this->form_validation->set_rules('no_hp','No_hp',"required");
 		// $this->form_validation->set_rules('fk_id_siswa','ID Siswa',"required");
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('admin/header');
-			$this->load->view('admin/nama_instansi/insert');
-			$this->load->view('admin/footer');
+			$this->load->view('admin/nama_instansi/template/header');
+			$this->load->view('admin/nama_instansi/insert',$data);
+			$this->load->view('admin/nama_instansi/template/footer');
 		} else {
 			$config['upload_path'] = './uploads/';
 			$config['allowed_types'] = 'gif|jpg|png';
@@ -38,14 +38,14 @@ class NamaInstansi extends CI_Controller {
 
 			if ( ! $this->upload->do_upload('logo_instansi')){
 				$error = array('error' => $this->upload->display_errors());
-				$this->load->view('admin/header');
-				$this->load->view('admin/nama_instansi/insert',$error);
-				$this->load->view('admin/footer');
+				$this->load->view('admin/nama_instansi/template/header');
+				$this->load->view('admin/nama_instansi/insert',$data);
+				$this->load->view('admin/nama_instansi/template/footer');
 			}
 			else{
 				$data = array('upload_data' => $this->upload->data());
-				$this->Nama_instansi_m->insert($data['upload_data']['file_name']);
-				redirect('Admin/Nama_instansi','refresh');
+				$this->NamaInstansiModel->insert($data['upload_data']['file_name']);
+				redirect('Admin/NamaInstansi','refresh');
 			}
 
 		}
@@ -60,10 +60,10 @@ class NamaInstansi extends CI_Controller {
 
 
 		if ($this->form_validation->run() == FALSE) {
-			$data['nama_instansi'] = $this->Nama_instansi_m->get_id($id);
-			$this->load->view('admin/header');
-			$this->load->view('admin/Nama_instansi/update', $data);
-			$this->load->view('admin/footer');
+			$data['nama_instansi'] = $this->NamaInstansiModel->get_id($id);
+			$this->load->view('admin/nama_instansi/template/header');
+			$this->load->view('admin/nama_instansi/update',$data);
+			$this->load->view('admin/nama_instansi/template/footer');
 		}
 		else {
 
@@ -78,27 +78,26 @@ class NamaInstansi extends CI_Controller {
 
 				if ( ! $this->upload->do_upload('logo_instansi')){
 
-					$data['nama_instansi'] = $this->Nama_instansi_m->get_id($id);
-					$data['error'] = $this->upload->display_errors('<p class="text-danger">','</p>');
-					$this->load->view('admin/header');
+					$data['nama_instansi'] = $this->NamaInstansiModel->get_id($id);
+					$this->load->view('admin/nama_instansi/template/header');
 					$this->load->view('admin/nama_instansi/insert',$data);
-					$this->load->view('admin/footer');
+					$this->load->view('admin/nama_instansi/template/footer');
 				}
 				else{
 					$data = array('upload_data' => $this->upload->data());
-					$this->Nama_instansi_m->update($id,$data['upload_data']['file_name']);
+					$this->NamaInstansiModel->update($id,$data['upload_data']['file_name']);
 					redirect('Admin/Nama_instansi','refresh');
 				}
 			}else{
-				$this->Nama_instansi_m->update($id,null);
-					redirect('Admin/Nama_instansi','refresh');
+				$this->NamaInstansiModel->update($id,null);
+					redirect('Admin/NamaInstansi','refresh');
 			}
 
 		}
 	}
 	public function delete($id)
 	{
-		$this->Nama_instansi_m->delete($id);
-		redirect('Admin/Nama_instansi','refresh');
+		$this->NamaInstansiModel->delete($id);
+		redirect('Admin/NamaInstansi','refresh');
 	}
 }

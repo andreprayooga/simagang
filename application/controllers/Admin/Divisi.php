@@ -24,11 +24,11 @@ class Divisi extends CI_Controller {
 		$this->form_validation->set_rules('fk_id_siswa','ID Siswa',"required");
 		$this->form_validation->set_rules('keterangan','Keterangan',"required");
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('admin/header');
+			$this->load->view('admin/divisi/template/header');
 			$this->load->view('admin/divisi/insert');
-			$this->load->view('admin/footer');
+			$this->load->view('admin/divisi/template/footer');
 		} else {
-			$this->Divisi_m->insert();
+			$this->DivisiModel->insert();
 			redirect('Admin/Divisi','refresh');
 		}
 	}
@@ -41,18 +41,18 @@ class Divisi extends CI_Controller {
 		$this->form_validation->set_rules('keterangan','Keterangan',"required");
 
 		if ($this->form_validation->run() == FALSE) {
-			$data['divisi'] = $this->Divisi_m->get_id($id);
-			$this->load->view('admin/header');
-			$this->load->view('admin/divisi/update', $data);
-			$this->load->view('admin/footer');
+			$data['divisi'] = $this->DivisiModel->get_id($id);
+			$this->load->view('admin/divisi/template/header');
+			$this->load->view('admin/divisi/update',$data);
+			$this->load->view('admin/divisi/template/footer');
 		} else {
-			$this->Divisi_m->update($id);
+			$this->DivisiModel->update($id);
 			redirect('Admin/Divisi','refresh');
 		}
 	}
 	public function delete($id)
 	{
-		$this->Divisi_m->delete($id);
+		$this->DivisiModel->delete($id);
 		redirect('Admin/Divisi','refresh');
 	}
 }

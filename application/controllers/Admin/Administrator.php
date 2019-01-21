@@ -7,7 +7,7 @@ class Administrator extends CI_Controller {
 		parent::__construct();
 		$this->load->library('form_validation');
 		$this->load->model('AdministratorModel');
-		
+
 	}
 	public function index()
 	{
@@ -24,11 +24,11 @@ class Administrator extends CI_Controller {
 		$this->form_validation->set_rules('password','Password',"required");
 		$this->form_validation->set_rules('fk_id_level','ID Level',"required");
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('admin/header');
+			$this->load->view('admin/administrator/template/header');
 			$this->load->view('admin/administrator/insert');
-			$this->load->view('admin/footer');
+			$this->load->view('admin/administrator/template/footer');
 		} else {
-			$this->Administrator_m->insert();
+			$this->AdministratorModel->insert();
 			redirect('Admin/Administrator','refresh');
 		}
 	}
@@ -39,21 +39,21 @@ class Administrator extends CI_Controller {
 		$this->form_validation->set_rules('email','Email',"required");
 		$this->form_validation->set_rules('password','Password',"required");
 		$this->form_validation->set_rules('fk_id_level','ID Level',"required");
-		
-		
+
+
 		if ($this->form_validation->run() == FALSE) {
-			$data['administrator'] = $this->Administrator_m->get_id($id);
-			$this->load->view('admin/header');
-			$this->load->view('admin/administrator/update', $data);
-			$this->load->view('admin/footer');
+			$data['administrator'] = $this->AdministratorModel->get_id($id);
+			$this->load->view('admin/administrator/template/header');
+			$this->load->view('admin/administrator/update',$data);
+			$this->load->view('admin/administrator/template/footer');
 		} else {
-			$this->Administrator_m->update($id);
+			$this->AdministratorModel->update($id);
 			redirect('Admin/Administrator','refresh');
 		}
 	}
 	public function delete($id)
 	{
-		$this->Administrator_m->delete($id);
+		$this->AdministratorModel->delete($id);
 		redirect('Admin/Administrator','refresh');
 	}
 }

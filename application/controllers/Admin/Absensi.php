@@ -25,9 +25,9 @@ class Absensi extends CI_Controller {
 		$this->form_validation->set_rules('keterangan','Keterangan',"required");
 		$this->form_validation->set_rules('fk_id_siswa','ID Siswa',"required");
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('admin/header');
+			$this->load->view('admin/absensi/template/header');
 			$this->load->view('admin/absensi/insert');
-			$this->load->view('admin/footer');
+			$this->load->view('admin/absensi/template/footer');
 		} else {
 			$this->Absensi_m->insert();
 			redirect('Admin/Absensi','refresh');
@@ -45,18 +45,18 @@ class Absensi extends CI_Controller {
 
 
 		if ($this->form_validation->run() == FALSE) {
-			$data['absensi'] = $this->Absensi_m->get_id($id);
-			$this->load->view('admin/header');
-			$this->load->view('admin/absensi/update', $data);
-			$this->load->view('admin/footer');
+			$data['absensi'] = $this->AbsensiModel->get_id($id);
+			$this->load->view('admin/absensi/template/header');
+			$this->load->view('admin/absensi/update',$data);
+			$this->load->view('admin/absensi/template/footer');
 		} else {
-			$this->Absensi_m->update($id);
+			$this->AbsensiModel->update($id);
 			redirect('Admin/Absensi','refresh');
 		}
 	}
 	public function delete($id)
 	{
-		$this->Absensi_m->delete($id);
+		$this->AbsensiModel->delete($id);
 		redirect('Admin/Absensi','refresh');
 	}
 }

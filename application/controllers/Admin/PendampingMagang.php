@@ -25,11 +25,11 @@ class PendampingMagang extends CI_Controller {
 		$this->form_validation->set_rules('password','Password',"required");
 		$this->form_validation->set_rules('fk_id_level','ID Level',"required");
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('admin/header');
-			$this->load->view('admin/pendamping_magang/insert');
-			$this->load->view('admin/footer');
+			$this->load->view('admin/pendamping/template/header');
+			$this->load->view('admin/pendamping/insert');
+			$this->load->view('admin/pendamping/template/footer');
 		} else {
-			$this->Pendamping_magang_m->insert();
+			$this->PendampingModel->insert();
 			redirect('Admin/Pendamping_magang','refresh');
 		}
 	}
@@ -44,18 +44,18 @@ class PendampingMagang extends CI_Controller {
 
 
 		if ($this->form_validation->run() == FALSE) {
-			$data['pendamping_magang'] = $this->Pendamping_magang_m->get_id($id);
-			$this->load->view('admin/header');
-			$this->load->view('admin/pendamping_magang/update', $data);
-			$this->load->view('admin/footer');
+			$data['pendamping_magang'] = $this->PendampingModel->get_id($id);
+			$this->load->view('admin/pendamping/template/header');
+			$this->load->view('admin/pendamping/update',$data);
+			$this->load->view('admin/pendamping/template/footer');
 		} else {
-			$this->Pendamping_magang_m->update($id);
+			$this->PendampingModel->update($id);
 			redirect('Admin/Pendamping_magang','refresh');
 		}
 	}
 	public function delete($id)
 	{
-		$delete = $this->Pendamping_magang_m->delete($id);
+		$delete = $this->PendampingModel->delete($id);
 
 		redirect('Admin/Pendamping_magang','refresh');
 	}

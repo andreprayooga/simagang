@@ -23,11 +23,11 @@ class Komentar extends CI_Controller {
 		$this->form_validation->set_rules('email','Email',"required");
 		$this->form_validation->set_rules('keterangan','Keterangan',"required");
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('admin/header');
+			$this->load->view('admin/komentar/template/header');
 			$this->load->view('admin/komentar/insert');
-			$this->load->view('admin/footer');
+			$this->load->view('admin/komentar/template/footer');
 		} else {
-			$this->Komentar_m->insert();
+			$this->KomentarModel->insert();
 			redirect('Admin/Komentar','refresh');
 		}
 	}
@@ -40,18 +40,18 @@ class Komentar extends CI_Controller {
 
 
 		if ($this->form_validation->run() == FALSE) {
-			$data['komentar'] = $this->Komentar_m->get_id($id);
-			$this->load->view('admin/header');
-			$this->load->view('admin/komentar/update', $data);
-			$this->load->view('admin/footer');
+			$data['komentar'] = $this->KomentarModel->get_id($id);
+			$this->load->view('admin/komentar/template/header');
+			$this->load->view('admin/komentar/update',$data);
+			$this->load->view('admin/komentar/template/footer');
 		} else {
-			$this->Komentar_m->update($id);
+			$this->KomentarModel->update($id);
 			redirect('Admin/Komentar','refresh');
 		}
 	}
 	public function delete($id)
 	{
-		$this->Komentar_m->delete($id);
+		$this->KomentarModel->delete($id);
 		redirect('Admin/Komentar','refresh');
 	}
 }
