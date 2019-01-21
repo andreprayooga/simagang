@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class login extends CI_Controller {
 
-	public function __construct() 
+	public function __construct()
 	{
 		parent::__construct();
 		$this->load->library('form_validation', 'session');
@@ -20,7 +20,7 @@ class login extends CI_Controller {
         $this->form_validation->set_rules('username', 'Username', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
         if($this->form_validation->run() === FALSE){
-            $this->load->view('auth/login', $data);
+            $this->load->view('auth/login');
         } else {
             // Get username
     $username = $this->input->post('username');
@@ -28,7 +28,7 @@ class login extends CI_Controller {
     $password = $this->input->post('password');
     // Login user
 	 $id_administrator = $this->AdminModel->login($username, $password);
-	 
+
     if($id_administrator){
         // Buat session
         $user_data = array(
@@ -45,7 +45,7 @@ class login extends CI_Controller {
         // Set message
                 $this->session->set_flashdata('login_failed', 'Login is invalid');
                 redirect('Login/index', 'refresh');
-				} 
+				}
 			}
 		  }
 		}

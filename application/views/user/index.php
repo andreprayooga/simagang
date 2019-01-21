@@ -55,7 +55,7 @@
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?= base_url('index.php/Login/index') ?>">Login</a>
+              <a class="nav-link js-scroll-trigger" href="<?= base_url('index.php/Admin/Sekolah') ?>">Login</a>
             </li>
           </ul>
         </div>
@@ -316,7 +316,7 @@ layanan teknologi informasi.</p><br>
                     <p class="text-muted">Menyediakan tempat dan budaya kerja yang kondusif, nyaman,
 menjunjung tinggi semangat kreativitas, inovatif, profesionalitas serta
 menciptakan sumber daya manusia yang kompeten dan berstandar
-internasional.</p><br> 
+internasional.</p><br>
 
                   </div>
                 </div>
@@ -377,7 +377,7 @@ internasional.</p><br>
                   Mobile Apps Native<br>
                   Digital Security Services</p>
             </div>
-          </div>        
+          </div>
         <div class="col-sm-3">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="<?= base_url('/assets/user/img/team/html.jpg') ?>" alt="">
@@ -644,9 +644,9 @@ Contact :
                   <p class="item-intro text-muted">Back to Natural with Healthy Life</p>
                   <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/portfolio/04-full.jpg') ?>" alt="">
                   <p>PT. Milagros Indonesia Megah adalah sebuah institusi bisnis yang mengkhususkan dirinya untuk bergerak di bidang Customer Refferal Program. Sebuah program yang menawarkan produk dan memberi kesempatan kepada masyarakat luas untuk membangun dan memiliki bisnisnya sendiri. Jiwa entrepreneurship dan kemandirian ekonomi adalah inspirasi besar yang menjiwai latar belakang berdirinya perusahaan ini.	 <br>
- 	 	 
+
        Demi mengawal kelancaran program yang diusungnya, perusahaan ini berkomitmen untuk menghadirkan produk yang berkualitas serta jelas fungsi dan manfaatnya. Selain itu dalam program yang ditawarkan, asas "Win Win Solution" adalah landasan dasar yang dipilih demi membangun kesejahteraan perusahaan dan para mitranya.<br>
-      	 	 
+
 Salam Sehat, Sukses, dan Sejahtera untuk kita semua.</p>
                   <ul class="list-inline">
                     <li>Fitur Meliput</li>
@@ -654,7 +654,7 @@ Salam Sehat, Sukses, dan Sejahtera untuk kita semua.</p>
                     <li>2. Stockist System </li>
 <li>3. Great System</li>
 <li>4. Online Event Registration System</li>
-                    
+
                   </ul>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
