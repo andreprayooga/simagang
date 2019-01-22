@@ -1,179 +1,84 @@
+<?php $c_name = "Posisi" ?>
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Simple Table</h4>
-                  <p class="card-category"> Here is a subtitle for this table</p>
-                </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead class=" text-primary">
-                        <th>
-                          ID
-                        </th>
-                        <th>
-                          Name
-                        </th>
-                        <th>
-                          Country
-                        </th>
-                        <th>
-                          City
-                        </th>
-                        <th>
-                          Salary
-                        </th>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            Dakota Rice
-                          </td>
-                          <td>
-                            Niger
-                          </td>
-                          <td>
-                            Oud-Turnhout
-                          </td>
-                          <td class="text-primary">
-                            $36,738
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            Minerva Hooper
-                          </td>
-                          <td>
-                            Curaçao
-                          </td>
-                          <td>
-                            Sinaai-Waas
-                          </td>
-                          <td class="text-primary">
-                            $23,789
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            Sage Rodriguez
-                          </td>
-                          <td>
-                            Netherlands
-                          </td>
-                          <td>
-                            Baileux
-                          </td>
-                          <td class="text-primary">
-                            $56,142
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Philip Chaney
-                          </td>
-                          <td>
-                            Korea, South
-                          </td>
-                          <td>
-                            Overland Park
-                          </td>
-                          <td class="text-primary">
-                            $38,735
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            Doris Greene
-                          </td>
-                          <td>
-                            Malawi
-                          </td>
-                          <td>
-                            Feldkirchen in Kärnten
-                          </td>
-                          <td class="text-primary">
-                            $63,542
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            6
-                          </td>
-                          <td>
-                            Mason Porter
-                          </td>
-                          <td>
-                            Chile
-                          </td>
-                          <td>
-                            Gloucester
-                          </td>
-                          <td class="text-primary">
-                            $78,615
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+            <div class="col-md-3">
+              <div class="row">
+              <div class="card card-profile">
+                <a href="<?php echo base_url('Barang/create')?>">
+                  <div class="card-header card-header-info">
+                    <h4 class="card-title">List Posisi Magang</h4>
                   </div>
+                </a>
+                <div class="card-body">
+                  <h6 class="card-category text-gray">Penempatan Posisi Siswa</h6>
+                  <p class="card-description">
+                    Diposisi manakah yang akan di ambil siswa, yang berguna untuk melatih bakat yang dimilikinya
+                  </p>
+                  <!-- <?php echo anchor('Barang/create', 'Tambah', array('class' => 'btn btn-info btn-round')); ?> -->
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="card card-profile">
+                <a href="#" data-toggle="modal" data-target="#exampleModal">
+                  <div class="card-header card-header-danger">
+                    <h4 class="card-title">Pindah Properti</h4>
+                  </div>
+                </a>
+                <div class="card-body">
+                  <h6 class="card-category text-gray">Pindahkan Properti</h6>
+                  <p class="card-description">
+                    Memindahkan properti dengan memberikan keterangan tentang kemana properti akan dipindahkan
+                  </p>
+                  <button type="button" class="btn btn-danger btn-round" data-toggle="modal" data-target="#exampleModal">
+                    Pindah
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <footer class="footer">
-        <div class="container-fluid">
-          <nav class="float-left">
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="https://creative-tim.com/presentation">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="https://www.creative-tim.com/license">
-                  Licenses
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright float-right">
-            &copy;
-            <script>
-              document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+          <div class="col-md-9">
+              <div class="card">
+                <div class="card-header card-header-rose">
+                  <div class="row">
+                    <div class="col-md-10">
+                  <h4 class="card-title ">Simple Table</h4>
+                  <p class="card-category"> Here is a subtitle for this table</p>
+                  </div>
+                </div>
+              </div>
+                <div class="card-body">
+                  <table class="table">
+                  <thead class=" text-rose">
+                    <th>ID.</th>
+                    <th>Nama Posisi</th>
+                    <th>ID Divisi</th>
+                    <th>Keterangan</th>
+                    <th></th>
+                  </thead>
+                  <tbody>
+                    <?php foreach ($data as $key => $value): ?>
+                      <tr>
+                        <td><?php echo ++$key; ?></td>
+                        <td><?php echo $value->nama ?></td>
+                        <td><?php echo $value->fk_id_divisi ?></td>
+                        <td><?php echo $value->keterangan ?></td>
+                        <td>
+                          <a class="btn btn-sm btn-success" href="#" rel="tooltip" title="Detail"><i class="material-icons">zoom_out_map</i></a>
+                          <a class="btn btn-sm btn-warning" href="<?php echo site_url("Admin/".$c_name."/update/".$value->id_posisi) ?>"  rel="tooltip" title="Edit"><i class="material-icons">edit</i></a>
+                          <a href="<?php echo site_url("Admin/".$c_name."/delete/".$value->id_posisi) ?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-sm btn-danger"  rel="tooltip" title="Hapus"><i class="material-icons">delete</i></a>
+                        </td>
+                      </tr>
+                      <?php endforeach ?>
+                  </tbody>
+                </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
           </div>
         </div>
-      </footer>
-    </div>
-  </div>
+      </div>

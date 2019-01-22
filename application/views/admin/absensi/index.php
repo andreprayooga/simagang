@@ -1,23 +1,71 @@
+<?php $c_name = "Absensi" ?>
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Simple Table</h4>
-                  <p class="card-category"> Here is a subtitle for this table</p>
+            <div class="col-md-2">
+              <div class="row">
+              <div class="card card-profile">
+                <a href="">
+                  <div class="card-header card-header-info">
+                    <h4 class="card-title">Activity Control</h4>
+                  </div>
+                </a>
+                <div class="card-body">
+                  <h6 class="card-category text-gray">Absensi</h6>
+                  <p class="card-description">
+                    Mengontrol kehadiran siswa selama menjalani PKL
+                  </p>
+                  <!-- <?php echo anchor('Barang/create', 'Tambah', array('class' => 'btn btn-info btn-round')); ?> -->
                 </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="card card-profile">
+                <a href="#" data-toggle="modal" data-target="#exampleModal">
+                  <div class="card-header card-header-danger">
+                    <h4 class="card-title">Tambah Divisi PKL</h4>
+                  </div>
+                </a>
+                <div class="card-body">
+                  <h6 class="card-category text-gray">Divisi PKL</h6>
+                  <p class="card-description">
+                    Mendambah Divisi Baru
+                  </p>
+                  <button type="button" class="btn btn-danger btn-round" data-toggle="modal" data-target="#exampleModal">
+                    Tambah
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-10">
+              <div class="card">
+                <div class="card-header card-header-rose">
+                  <div class="row">
+                    <div class="col-md-10">
+                  <h4 class="card-title ">Absensi Kehadiran</h4>
+                  <p class="card-category">Untuk mencatat kehadiran siswa setiap hari</p>
+                  </div>
+                  <div class="col-xs-2">
+                    <a href="#" rel="tooltip" title="Print" class="btn btn-secondary">
+                      <i class="material-icons">print</i>
+                    </a>
+                  </div>
+                </div>
+              </div>
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table">
-                      <thead class=" text-primary">
+                      <thead class=" text-rose">
                         <th>ID.</th>
                         <th>Tanggal</th>
                         <th>Datang</th>
                         <th>Pulang</th>
+                        <th>Aktivitas</th>
+                        <th>Keterangan</th>
                         <th>Siswa</th>
-                        <th>Aksi</th>
+                        <th></th>
                       </thead>
                       <tbody>
                         <?php foreach ($data as $key => $value): ?>
@@ -43,44 +91,8 @@
                   </div>
                 </div>
               </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <div class="container-fluid">
-          <nav class="float-left">
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="https://creative-tim.com/presentation">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="https://www.creative-tim.com/license">
-                  Licenses
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright float-right">
-            &copy;
-            <script>
-              document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-          </div>
-        </div>
-      </footer>
-    </div>
-  </div>
