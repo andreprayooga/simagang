@@ -27,7 +27,7 @@ class Posisi extends CI_Controller {
 			$this->load->view('admin/posisi/insert');
 			$this->load->view('admin/posisi/template/footer');
 		} else {
-			$this->Posisi_m->insert();
+			$this->PosisiModel->insert();
 			redirect('Admin/Posisi','refresh');
 		}
 	}

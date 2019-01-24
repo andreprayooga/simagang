@@ -30,7 +30,7 @@
                   <p class="card-category"> Here is a subtitle for this table</p>
                   </div>
                   <div class="col-xs-2">
-                    <a href="#" rel="tooltip" title="Tambah Data" class="btn btn-secondary">
+                    <a href="<?= base_url('index.php/Admin/NamaInstansi/insert') ?>" rel="tooltip" title="Tambah Data" class="btn btn-secondary">
                       <i class="material-icons">add_box</i>
                     </a>
                   </div>

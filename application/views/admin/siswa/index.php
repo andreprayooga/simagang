@@ -3,12 +3,21 @@
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-12">
+          <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-rose">
-                  <h4 class="card-title ">Simple Table</h4>
-                  <p class="card-category"> Here is a subtitle for this table</p>
+                  <div class="row">
+                    <div class="col-md-10">
+                  <h4 class="card-title ">Siswa Magang</h4>
+                  <p class="card-category">List Siswa yang magang</p>
+                  </div>
+                  <div class="col-xs-2">
+                    <a href="<?= base_url('index.php/Admin/SiswaMagang/insert') ?>" rel="tooltip" title="Tambah Data" class="btn btn-secondary">
+                      <i class="material-icons">add_box</i>
+                    </a>
+                  </div>
                 </div>
+              </div>
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table">
@@ -21,7 +30,7 @@
                       <th>Nama Instansi</th>
                       <th>Alamat</th>
                       <th>Jenis Kelamin</th>
-                      <th>Aksi</th>
+                      <th></th>
                     </thead>
                     <tbody>
                       <?php foreach ($data as $key => $value): ?>

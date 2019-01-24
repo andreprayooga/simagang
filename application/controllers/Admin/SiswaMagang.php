@@ -18,6 +18,12 @@ class SiswaMagang extends CI_Controller {
 	}
 	public function insert()
 	{
+		$data = array(
+            'provinsi' => $this->SiswaModel->get_provinsi(),
+            'kota' => $this->SiswaModel->get_kota(),
+						'provinsi_selected' => '',
+						'kota_selected' => '',
+        );
 		$this->form_validation->set_error_delimiters('<p class="text-danger">','</p');
 		$this->form_validation->set_rules('nim_nisn','nim_nisn',"required");
 		$this->form_validation->set_rules('nama','nama',"required|trim");
@@ -33,10 +39,11 @@ class SiswaMagang extends CI_Controller {
 		$this->form_validation->set_rules('tanggal_lahir','tanggal_lahir',"required");
 		$this->form_validation->set_rules('jenis_kelamin','jenis_kelamin',"required");
 		$this->form_validation->set_rules('no_hp','no_hp',"required");
+		$this->form_validation->set_rules('username','username',"required");
 		$this->form_validation->set_rules('password','password',"required");
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('admin/siswa/template/header');
-			$this->load->view('admin/siswa/insert');
+			$this->load->view('admin/siswa/insert', $data);
 			$this->load->view('admin/siswa/template/footer');
 		} else {
 			$config['upload_path'] = './uploads/';
@@ -56,7 +63,7 @@ class SiswaMagang extends CI_Controller {
 			else{
 				$data = array('upload_data' => $this->upload->data());
 				$this->SiswaModel->insert($data['upload_data']['file_name']);
-				redirect('Admin/SiswaMagang','refresh');
+				redirect('Admin/SiswaMagang/index','refresh');
 			}
 
 

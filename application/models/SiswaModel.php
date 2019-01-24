@@ -34,12 +34,12 @@ class SiswaModel extends CI_Model {
 			'alamat' => $this->input->post('alamat'),
 			'provinsi' => $this->input->post('provinsi'),
 			'kota' => $this->input->post('kota'),
-			'alamat_magang' => $this->input->post('alamat_magang'),
 			'tempat_lahir' => $this->input->post('tempat_lahir'),
 			'tanggal_lahir' => $this->input->post('tanggal_lahir'),
 			'foto' => $foto,
 			'jenis_kelamin' => $this->input->post('jenis_kelamin'),
 			'no_hp' => $this->input->post('no_hp'),
+			'username' => $this->input->post('username'),
 			'password' => $this->input->post('password'),
 		);
 		$this->db->insert('siswa_magang',$set);
@@ -75,4 +75,18 @@ class SiswaModel extends CI_Model {
 		$this->db->where('id_siswa',$id);
 		$this->db->delete('siswa_magang');
 	}
+
+	public function get_provinsi()
+{
+		$this->db->order_by('nama_provinsi', 'asc');
+		return $this->db->get('provinsi')->result();
+}
+
+public function get_kota()
+{
+		// kita joinkan tabel kota dengan provinsi
+		$this->db->order_by('nama_kota', 'asc');
+		$this->db->join('provinsi', 'kota.fk_id_provinsi = provinsi.id_provinsi');
+		return $this->db->get('kota')->result();
+}
 }

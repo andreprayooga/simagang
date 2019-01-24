@@ -79,6 +79,13 @@
 <script src="<?= base_url('assets/admin/js/material-dashboard.js?v=2.1.1') ?>" type="text/javascript"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="<?= base_url('assets/admin/demo/demo.js') ?>"></script>
+<!-- Chain JS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-chained/1.0.1/jquery.chained.min.js"></script>
+<script>
+            $("#kota").chained("#provinsi"); // disini kita hubungkan kota dengan provinsi
+            $("#kecamatan").chained("#kota"); // disini kita hubungkan kecamatan dengan kota
+        </script>
+
 <script>
   $(document).ready(function() {
     $().ready(function() {

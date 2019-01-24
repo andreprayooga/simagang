@@ -20,24 +20,6 @@
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="card card-profile">
-                <a href="#" data-toggle="modal" data-target="#exampleModal">
-                  <div class="card-header card-header-danger">
-                    <h4 class="card-title">Pindah Properti</h4>
-                  </div>
-                </a>
-                <div class="card-body">
-                  <h6 class="card-category text-gray">Pindahkan Properti</h6>
-                  <p class="card-description">
-                    Memindahkan properti dengan memberikan keterangan tentang kemana properti akan dipindahkan
-                  </p>
-                  <button type="button" class="btn btn-danger btn-round" data-toggle="modal" data-target="#exampleModal">
-                    Pindah
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="col-md-9">
               <div class="card">
@@ -46,6 +28,11 @@
                     <div class="col-md-10">
                   <h4 class="card-title ">Simple Table</h4>
                   <p class="card-category"> Here is a subtitle for this table</p>
+                  </div>
+                  <div class="col-xs-2">
+                    <a href="<?= base_url('index.php/Admin/Posisi/insert') ?>" rel="tooltip" title="Tambah Data" class="btn btn-secondary">
+                      <i class="material-icons">add_box</i>
+                    </a>
                   </div>
                 </div>
               </div>

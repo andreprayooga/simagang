@@ -24,13 +24,13 @@
               <div class="card card-profile">
                 <a href="#" data-toggle="modal" data-target="#exampleModal">
                   <div class="card-header card-header-danger">
-                    <h4 class="card-title">Tambah Divisi PKL</h4>
+                    <h4 class="card-title">Absensi</h4>
                   </div>
                 </a>
                 <div class="card-body">
-                  <h6 class="card-category text-gray">Divisi PKL</h6>
+                  <h6 class="card-category text-gray">Kehadiran User</h6>
                   <p class="card-description">
-                    Mendambah Divisi Baru
+                    Menambah Absensi Baru
                   </p>
                   <button type="button" class="btn btn-danger btn-round" data-toggle="modal" data-target="#exampleModal">
                     Tambah
