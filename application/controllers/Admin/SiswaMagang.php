@@ -29,18 +29,20 @@ class SiswaMagang extends CI_Controller {
 		$this->form_validation->set_rules('nama','nama',"required|trim");
 		$this->form_validation->set_rules('email','Email',"required");
 		$this->form_validation->set_rules('jurusan','jurusan',"required");
-		$this->form_validation->set_rules('nama_sekolah','nama_sekolah',"required");
+		$this->form_validation->set_rules('nama_instansi','nama_instansi',"required");
 		$this->form_validation->set_rules('semester','semester',"required");
 		$this->form_validation->set_rules('alamat','alamat',"required");
+		$this->form_validation->set_rules('no_hp','no_hp',"required");
 		$this->form_validation->set_rules('provinsi','provinsi',"required");
 		$this->form_validation->set_rules('kota','kota',"required");
-		$this->form_validation->set_rules('alamat_magang','alamat_magang',"required");
 		$this->form_validation->set_rules('tempat_lahir','tempat_lahir',"required");
 		$this->form_validation->set_rules('tanggal_lahir','tanggal_lahir',"required");
-		$this->form_validation->set_rules('jenis_kelamin','jenis_kelamin',"required");
-		$this->form_validation->set_rules('no_hp','no_hp',"required");
+		$this->form_validation->set_rules('bulan','bulan',"required");
+		$this->form_validation->set_rules('tahun','tahun',"required");
 		$this->form_validation->set_rules('username','username',"required");
 		$this->form_validation->set_rules('password','password',"required");
+		$this->form_validation->set_rules('jenis_kelamin','jenis_kelamin',"required");
+
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('admin/siswa/template/header');
 			$this->load->view('admin/siswa/insert', $data);
@@ -63,7 +65,7 @@ class SiswaMagang extends CI_Controller {
 			else{
 				$data = array('upload_data' => $this->upload->data());
 				$this->SiswaModel->insert($data['upload_data']['file_name']);
-				redirect('Admin/SiswaMagang/index','refresh');
+				redirect('Admin/SiswaMagang','refresh');
 			}
 
 
@@ -76,18 +78,19 @@ class SiswaMagang extends CI_Controller {
 		$this->form_validation->set_rules('nama','nama',"required|trim");
 		$this->form_validation->set_rules('email','Email',"required");
 		$this->form_validation->set_rules('jurusan','jurusan',"required");
-		$this->form_validation->set_rules('nama_sekolah','nama_sekolah',"required");
+		$this->form_validation->set_rules('nama_instansi','nama_instansi',"required");
 		$this->form_validation->set_rules('semester','semester',"required");
 		$this->form_validation->set_rules('alamat','alamat',"required");
+		$this->form_validation->set_rules('no_hp','no_hp',"required");
 		$this->form_validation->set_rules('provinsi','provinsi',"required");
 		$this->form_validation->set_rules('kota','kota',"required");
-		$this->form_validation->set_rules('alamat_magang','alamat_magang',"required");
 		$this->form_validation->set_rules('tempat_lahir','tempat_lahir',"required");
 		$this->form_validation->set_rules('tanggal_lahir','tanggal_lahir',"required");
-		$this->form_validation->set_rules('jenis_kelamin','jenis_kelamin',"required");
-		$this->form_validation->set_rules('no_hp','no_hp',"required");
+		$this->form_validation->set_rules('bulan','bulan',"required");
+		$this->form_validation->set_rules('tahun','tahun',"required");
+		$this->form_validation->set_rules('username','username',"required");
 		$this->form_validation->set_rules('password','password',"required");
-
+		$this->form_validation->set_rules('jenis_kelamin','jenis_kelamin',"required");
 
 		if ($this->form_validation->run() == FALSE) {
 			$data['siswa_magang'] = $this->SiswaModel->get_id($id);
@@ -126,7 +129,7 @@ class SiswaMagang extends CI_Controller {
 	}
 	public function delete($id)
 	{
-		$this->Siswa_magang_m->delete($id);
+		$this->SiswaModel->delete($id);
 		redirect('Admin/Siswa_magang','refresh');
 	}
 }

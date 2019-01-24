@@ -68,7 +68,7 @@
                     <div class="row">
                       <div class="col-sm-6">
                         <div class="form-group">
-                          <label for="nama_divisi">Provinsi</label>
+                          <label for="provinsi">Provinsi</label>
                           <select class="custom-select" name="provinsi"class="form-control" id="provinsi">
                             <?php
                             foreach ($provinsi as $prov) {
@@ -83,7 +83,7 @@
                       </div>
                       <div class="col-sm-6">
                         <div class="form-group">
-                          <label for="kondisi_model">Kabupaten / Kota</label>
+                          <label for="kota">Kabupaten / Kota</label>
                           <select class="custom-select" name="kota" class="form-control" id="kota">
                             <?php
                             foreach ($kota as $kot) {
@@ -101,7 +101,7 @@
                     <div class="row">
                       <div class="col-sm-6">
                         <div class="form-group">
-                          <label for="nama_divisi">Tampat Lahir</label>
+                          <label for="tempat_lahir">Tampat Lahir</label>
                           <select class="custom-select" name="tempat_lahir"class="form-control" id="tempat_lahir">
                             <?php foreach ($this->db->get('kota')->result_array() as $key => $value): ?>
                               <option value="<?php echo $value['id_kota'] ?>"><?php echo $value['nama_kota'] ?></option>
@@ -111,7 +111,7 @@
                       </div>
                       <div class="col-sm-2">
                       <div class="form-group">
-                        <label for="nama_divisi">Tanggal</label>
+                        <label for="tanggal">Tanggal</label>
                         <select class="custom-select" name="tanggal" required>
                           <?php foreach ($this->db->get('tanggal')->result_array() as $key => $value): ?>
                             <option value="<?php echo $value['id_date'] ?>"><?php echo $value['date_number'] ?></option>
@@ -121,7 +121,7 @@
                       </div>
                       <div class="col-sm-2">
                       <div class="form-group">
-                        <label for="nama_divisi">Bulan</label>
+                        <label for="bulan">Bulan</label>
                         <select class="custom-select" name="bulan" required>
                           <?php foreach ($this->db->get('bulan')->result_array() as $key => $value): ?>
                             <option value="<?php echo $value['id_bulan'] ?>"><?php echo $value['nama_bulan'] ?></option>
@@ -131,7 +131,7 @@
                       </div>
                       <div class="col-sm-2">
                       <div class="form-group">
-                        <label for="nama_divisi">Tahun</label>
+                        <label for="tahun">Tahun</label>
                         <select class="custom-select" name="tahun" required>
                           <?php foreach ($this->db->get('tahun')->result_array() as $key => $value): ?>
                             <option value="<?php echo $value['id_tahun'] ?>"><?php echo $value['pilih_tahun'] ?></option>
@@ -157,7 +157,7 @@
                   <div class="row">
                     <div class="col-sm-4">
                       <div class="form-group">
-                        <label for="nama_divisi">Jenis Kelmin</label>
+                        <label for="jenis_kelamin">Jenis Kelamin</label>
                         <select class="custom-select" name="nama_divisi" required>
                           <option selected value="">Pilih Jenis Kelamin</option>
                            <option>Laki - Laki</option>

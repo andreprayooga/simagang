@@ -21,6 +21,7 @@ class Administrator extends CI_Controller {
 		$this->form_validation->set_error_delimiters('<p class="text-danger">','</p');
 		$this->form_validation->set_rules('nama','Nama',"required|trim");
 		$this->form_validation->set_rules('email','Email',"required");
+		$this->form_validation->set_rules('username','Username',"required|trim");
 		$this->form_validation->set_rules('password','Password',"required");
 		$this->form_validation->set_rules('fk_id_level','ID Level',"required");
 		if ($this->form_validation->run() == FALSE) {
@@ -37,10 +38,9 @@ class Administrator extends CI_Controller {
 		$this->form_validation->set_error_delimiters('<p class="text-danger">','</p');
 		$this->form_validation->set_rules('nama','Nama',"required|trim");
 		$this->form_validation->set_rules('email','Email',"required");
+		$this->form_validation->set_rules('username','Username',"required|trim");
 		$this->form_validation->set_rules('password','Password',"required");
-		$this->form_validation->set_rules('fk_id_level','ID Level',"required");
-
-
+		
 		if ($this->form_validation->run() == FALSE) {
 			$data['administrator'] = $this->AdministratorModel->get_id($id);
 			$this->load->view('admin/administrator/template/header');

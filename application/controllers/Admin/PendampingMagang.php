@@ -22,6 +22,7 @@ class PendampingMagang extends CI_Controller {
 		$this->form_validation->set_rules('nama','Nama',"required|trim");
 		$this->form_validation->set_rules('email','Email',"required");
 		$this->form_validation->set_rules('no_hp','no_hp',"required|trim");
+		$this->form_validation->set_rules('username','Username',"required|trim");
 		$this->form_validation->set_rules('password','Password',"required");
 		$this->form_validation->set_rules('fk_id_level','ID Level',"required");
 		if ($this->form_validation->run() == FALSE) {
@@ -39,6 +40,7 @@ class PendampingMagang extends CI_Controller {
 		$this->form_validation->set_rules('nama','Nama',"required|trim");
 		$this->form_validation->set_rules('email','Email',"required");
 		$this->form_validation->set_rules('no_hp','no_hp',"required|trim");
+		$this->form_validation->set_rules('username','Username',"required|trim");
 		$this->form_validation->set_rules('password','Password',"required");
 		$this->form_validation->set_rules('fk_id_level','ID Level',"required");
 
@@ -50,13 +52,13 @@ class PendampingMagang extends CI_Controller {
 			$this->load->view('admin/pendamping/template/footer');
 		} else {
 			$this->PendampingModel->update($id);
-			redirect('Admin/Pendamping_magang','refresh');
+			redirect('Admin/PendampingMagang','refresh');
 		}
 	}
 	public function delete($id)
 	{
 		$delete = $this->PendampingModel->delete($id);
 
-		redirect('Admin/Pendamping_magang','refresh');
+		redirect('Admin/PendampingMagang','refresh');
 	}
 }

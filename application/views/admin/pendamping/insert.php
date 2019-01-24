@@ -8,7 +8,7 @@
             <p class="card-category">Menambah Pendamping kedalam daftar dengan informasi yang lengkap</p>
           </div>
           <div class="card-body">
-             <?php echo form_open_multipart("",array("id"=>"form-input")); ?>
+            <?php echo form_open_multipart('Admin/PendampingMagang/insert') ?>
             <form action="" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="bmd-label-floating">Nama Pendamping</label>
@@ -42,20 +42,10 @@
                         <input type="password" id="input-password" name="password" class="form-control" value="<?php echo set_value("password") ?>" autocomplete="off">
                     </div>
                   </div>
-                  <div class="col-sm-3">
-                    <div class="form-group">
-                      <label for="kondisi_model">Pilih Level</label>
-                      <select class="custom-select" name="fk_id_siswa" class="form-control">
-                         <?php foreach ($this->db->get('status_level')->result_array() as $key => $value): ?>
-                          <option value="<?php echo $value['id_level'] ?>"><?php echo $value['level'] ?></option>
-                        <?php endforeach ?>
-                      </select>
-                    </div>
-                  </div>
                 <?php echo form_close(); ?>
                   </div>
                   <div class="form-group">
-                    <input class="btn btn-info" type="submit" value="Simpan">
+                    <button class="btn btn-info" type="submit">Simpan</button>
                   </div>
                 </div>
                 </form>

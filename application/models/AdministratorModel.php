@@ -27,8 +27,8 @@ class AdministratorModel extends CI_Model {
 		$set = array(
 			'nama' => $this->input->post('nama'),
 			'email' => $this->input->post('email'),
+			'username' => $this->input->post('username'),
 			'password' => $this->input->post('password'),
-			'fk_id_level' => $this->input->post('fk_id_level'),
 		);
 		$this->db->insert('administrator',$set);
 	}
@@ -37,8 +37,8 @@ class AdministratorModel extends CI_Model {
 		$set = array(
 			'nama' => $this->input->post('nama'),
 			'email' => $this->input->post('email'),
+			'username' => $this->input->post('username'),
 			'password' => $this->input->post('password'),
-			'fk_id_level' => $this->input->post('fk_id_level'),
 		);
 		$this->db->where('id_administrator',$id);
 		$this->db->update('administrator',$set);

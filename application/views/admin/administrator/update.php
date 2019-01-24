@@ -11,15 +11,19 @@
             <form action="" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="bmd-label-floating">Nama</label>
-                        <input type="text" id="input-nama" name="nama" class="form-control" value="<?php echo $komentar->nama ?>">
+                        <input type="text" id="input-nama" name="nama" class="form-control" value="<?php echo $administrator->nama ?>" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <label class="bmd-label-floating">Email</label>
-                        <input type="email" id="input-email" name="email" class="form-control" value="<?php echo $komentar->email ?>">
+                        <input type="email" id="input-email" name="email" class="form-control" value="<?php echo $administrator->email ?>" autocomplete="off">
                     </div>
                     <div class="form-group">
-                            <label class="bmd-label-floating">Keterangan</label>
-                            <input type="text" id="input-keterangan" name="keterangan" class="form-control" value="<?php echo $komentar->keterangan ?>">
+                        <label class="bmd-label-floating">Username</label>
+                        <input type="text" id="input-username" name="username" class="form-control" value="<?php echo $administrator->username ?>" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                            <label class="bmd-label-floating">Password</label>
+                            <input type="password" id="input-password" name="password" class="form-control" value="<?php echo $administrator->password ?>" autocomplete="off">
                         </div>
                   <div class="form-group">
                     <input class="btn btn-success" type="submit" value="Update">

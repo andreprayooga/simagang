@@ -15,14 +15,13 @@
                   <div class="form-group">
                     <label for="nama_divisi">Nama Divisi</label>
                     <select class="custom-select" name="nama_divisi" required>
-                      <option selected value="">Pilih Jenis Disisi</option>
+                      <option selected value="">Pilih Jenis Divisi</option>
                        <option>Business Dev</option>
                        <option>Services</option>
                        <option>Production</option>
                        <option>R&D</option>
                        <?php echo set_value('nama_divisi') ?>
                     </select>
-                    <div class="invalid-feedback">Pilih dulu kategorinya gan</div>
                   </div>
                 </div>
               </div>
