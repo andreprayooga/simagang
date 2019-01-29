@@ -8,11 +8,10 @@
             <p class="card-category">Menambah Instansi kedalam daftar dengan informasi yang lengkap</p>
           </div>
           <div class="card-body">
-             <?php echo form_open_multipart("",array("id"=>"form-input")); ?>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="<?php base_url('index.php/Admin/NamaInstansi/insert') ?>" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="bmd-label-floating">Nama Sekolah</label>
-                        <input type="text" id="input-no_hp" name="nama" class="form-control" value="<?php echo set_value("nama_instansi") ?>" autocomplete="off">
+                        <input type="text" id="input-nama_instansi" name="nama_instansi" class="form-control" value="<?php echo set_value("nama_instansi") ?>" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <label class="bmd-label-floating">Alamat</label>
@@ -42,7 +41,6 @@
                         </select>
                       </div>
                     </div>
-                    <?php echo form_close(); ?>
                   </div>
                   <div class="form-group">
                     <input class="btn btn-info" type="submit" value="Simpan">

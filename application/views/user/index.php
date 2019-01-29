@@ -49,7 +49,10 @@
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+              <a class="nav-link js-scroll-trigger" href="#team">Divisi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#position">Position</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -151,7 +154,7 @@
       </div>
     </section>
 
-    <!-- Portfolio Grid -->
+    <!-- Portfolio Projek -->
     <section class="bg-light" id="portfolio">
       <div class="container">
         <div class="row">
@@ -165,20 +168,18 @@
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="<?= base_url('/assets/user/img/portfolio/01-thumbnail.jpg') ?>" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Smart Warehouse for Coday Coffee with Blockchain Technology </h4>
+              <h4>Coday Coffee</h4>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="<?= base_url('/assets/user/img/portfolio/02-thumbnail.jpg') ?>" alt="">
@@ -191,7 +192,6 @@
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="<?= base_url('/assets/user/img/portfolio/03-thumbnail.jpg') ?>" alt="">
@@ -204,7 +204,6 @@
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="<?= base_url('/assets/user/img/portfolio/04-thumbnail.jpg') ?>" alt="">
@@ -217,7 +216,6 @@
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="<?= base_url('/assets/user/img/portfolio/05-thumbnail.jpg') ?>" alt="">
@@ -230,7 +228,6 @@
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="<?= base_url('/assets/user/img/portfolio/06-thumbnail.jpg') ?>" alt="">
@@ -242,6 +239,7 @@
         </div>
       </div>
     </section>
+
 
     <!-- About -->
     <section id="about">
@@ -335,12 +333,12 @@ internasional.</p><br>
       </div>
     </section>
 
-    <!-- Team -->
+    <!-- Divisi -->
     <section class="bg-light" id="team">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+            <h2 class="section-heading text-uppercase">Divisi</h2>
             <h3 class="section-subheading text-muted">Strategic Management</h3>
           </div>
         </div>
@@ -394,6 +392,101 @@ internasional.</p><br>
         </div>
       </div>
     </section>
+
+    <!-- Position -->
+    <section class="bg-light" id="position">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Position</h2>
+            <h3 class="section-subheading text-muted">Position Magang</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal8">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                </div>
+              </div>
+              <img class="img-fluid" src="<?= base_url('/assets/user/img/position/thumbnail-1.jpg') ?>" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>SOFTWARE ENGINEER - PROGRAMMER </h4>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal9">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                </div>
+              </div>
+              <img class="img-fluid" src="<?= base_url('/assets/user/img/position/thumbnail-5.jpg') ?>" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>IT<br>DATA ANALYST </h4>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal10">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                </div>
+              </div>
+              <img class="img-fluid" src="<?= base_url('/assets/user/img/position/thumbnail-3.jpg') ?>" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>MULTIMEDIA - GRAPHIC DESIGNER</h4>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal11">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                </div>
+              </div>
+              <img class="img-fluid" src="<?= base_url('/assets/user/img/position/thumbnail-4.jpg') ?>" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>ANDROID<br>DEVELOPER</h4>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal12">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                </div>
+              </div>
+              <img class="img-fluid" src="<?= base_url('/assets/user/img/position/thumbnail-2.jpg') ?>" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>NETWORK<br>ENGINEER</h4>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal13">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                </div>
+              </div>
+              <img class="img-fluid" src="<?= base_url('/assets/user/img/position/thumbnail-6.jpg') ?>" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>DATABASE ADMINISTRATOR</h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
 
     <!-- Clients -->
     <section class="py-5">
@@ -517,7 +610,7 @@ Contact :
       </div>
     </footer>
 
-    <!-- Portfolio Modals -->
+    <!-- Portfolio Projek -->
 
     <!-- Modal 1 -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
@@ -555,6 +648,7 @@ Contact :
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close Project</button>
+
                 </div>
               </div>
             </div>
@@ -731,6 +825,278 @@ luas dan jaringan yang tak terbatas.</p>
         </div>
       </div>
     </div>
+
+     <!-- Portfolio Position -->
+
+    <!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">SOFTWARE ENGINEER</h2>
+                  <p class="item-intro text-muted">PROGRAMMER</p>
+                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/position/full-1.jpg')?>" alt="">
+                  <p>DESCRIPTION</p>
+                  <ul class="list-inline">
+
+                    <li>- Menjaga dan meningkatkan situs web</li>
+                    <li>- Optimalkan aplikasi untuk kecepatan maksimum</li>
+                    <li>- Desain fitur berbasis seluler</li>
+                    <li>- Berkolaborasi dengan pengembang back-end dan desainer web untuk meningkatkan kegunaan</li>
+                    <li>- Dapatkan umpan balik dari, dan membangun solusi untuk, pengguna dan pelanggan</li>
+                    <li>- Menulis dokumen persyaratan fungsional dan panduan</li>
+                    <li>- Buat maket dan prototipe berkualitas</li>
+                    <li>- Bantu pengembang back-end dengan pengkodean dan pemecahan masalah</li>
+                    <li>- Pastikan standar grafis berkualitas tinggi dan konsistensi mereka</li>
+                    <li>- Tetap up-to-date tentang teknologi yang muncul</p></li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close Project</button>
+                  <button class="btn btn-primary" href="<?= base_url('index.php/Register') ?>" type="button">
+                    <i class="fa fa-user-plus"></i>
+                    Register</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">NETWORK ENGINEER</h2>
+                  <p class="item-intro text-muted">Mengurusi jaringan komputer/telekomunikasi di sebuah organisasi</p>
+                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/position/full-2.jpg') ?>" alt="">
+                 <p>DESCRIPTION</p>
+                  <ul class="list-inline">
+
+                    <li>- Merancang dan mengimplementasikan solusi jaringan baru dan / atau meningkatkan efisiensi jaringan saat ini</li>
+                    <li>- Pasang, konfigurasikan, dan dukung peralatan jaringan termasuk router, server proxy, sakelar, akselerator WAN, DNS dan DHCP</li>
+                    <li>-Menyediakan peralatan jaringan dan mengelola subkontraktor yang terlibat dengan pemasangan jaringan</li>
+                    <li>- Mengkonfigurasi firewall, perutean, dan pengalihan untuk memaksimalkan efisiensi dan keamanan jaringan</li>
+                    <li>- Mengoptimalkan kinerja jaringan melalui pemantauan dan pemecahan masalah yang sedang berlangsung</li>
+                    <li>- Atur peningkatan terjadwal</li>
+                    <li>- Selidiki kesalahan dalam sistem jaringan</li>
+                    <li>- Monitor dan perbarui peralatan jaringan ke rilis firmware terbaru</li>
+                    <li>- Kumpulkan status jaringan dan laporkan ke pemangku kepentingan utama</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close Project</button>
+                  <button class="btn btn-primary" href="" type="button">
+                    <i class="fa fa-user-plus"></i>
+                    Register</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">MULTIMEDIA</h2>
+                  <p class="item-intro text-muted">GRAPHIC DESIGNER</p>
+                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/position/full-3.jpg') ?>" alt="">
+                  <p>Bertanggung jawab dalam merancang, melakukan riset dan mendesain penampilan produk digital untuk Aplikasi dan Website.</p>
+                  <ul class="list-inline">
+
+                    <li>- Membuat dan menyediakan Flitts dengan konten yang dirancang sendiri.</li>
+                    <li>- Merancang antarmuka pengguna untuk situs web dan aplikasi baru dan yang dirancang ulang</li>
+                    <li>- Buat wireframes, maket, dan prototipe situs Web responsive (menggunakan zeplin dan sejenisnya) *akan diajarkan cara penggunaan zeplin</li>
+                    <li>- Bekerja pada proyek dengan cakupan beragam dengan kemampuan yang tajam untuk beralih antara tugas kreatif</li>
+                    <li>- Berfokus pada estetika material, ide, konseptualisasi dan penerjemahan strategi pasar; secara efektif mendesain sistem dan tata letak yang memaksimalkan keterbacaan dan komunikasi pesan.</li>
+                    <li>- Membuat desain yang unik dan menarik untuk mendukung kebutuhan divisi lain seperti team sales,team sosmed,dll.</li>
+                    <li>- Mampu menyelesaikan design corporate identity seperti logo dan marketing material seperti company profile, poster, brochures, dan lainnya</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close Project</button>
+                  <button class="btn btn-primary" href="" type="button">
+                    <i class="fa fa-user-plus"></i>
+                    Register</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">IT DATA ANALYST</h2>
+                  <p class="item-intro text-muted">Mengembangkan dan mengelola data untuk menjadi informasi, baik dalam bentuk laporan/dashboard untuk mendukung kebutuhan bisnis, baik yang bersifat strategic maupun untuk operasional.</p>
+                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/position/full-5.jpg') ?>" alt="">
+                  <p>DESCRIPTION</p>
+                  <ul class="list-inline">
+
+                    <li>- Memproses permintaan data dari user setelah mendapat persetujuan dari Direksi</li>
+                    <li>- Mengecek apakah cashflow report rutin harian/ mingguan/ bulanan sudah jalan</li>
+                    <li>- Sesuai schedulenya atau belum, Membantu user memperbaiki cashflow report bila</li>
+                    <li>- Ada data yang salah/ tidak sesuai.</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close Project</button>
+                  <button class="btn btn-primary" href="" type="button">
+                    <i class="fa fa-user-plus"></i>
+                    Register</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">ANDROID DEVELOPER</h2>
+                  <p class="item-intro text-muted">Mengembangkan aplikasi untuk perangkat dengan sistem operasi Android</p>
+                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/position/full-4.jpg') ?>" alt="">
+                  <p>DESCRIPTION</p>
+                  <ul class="list-inline">
+
+                    <li>- Menguasai pemrograman aplikasi Android native menggunakan Java & Kotlin</li>
+                    <li>- Menguasai Android Studio</li>
+                    <li>- Memahami XML, Android SDK, Firebase, MySQL, Google API, Material Design</li>
+                    <li>- Dapat menggunakan Git untuk kolaborasi tim</li>
+                    <li>- Mempunyai pemahaman yang baik mengenai konsep OOP, MVC, CRUD, OOAD dan</li>
+                    <li>- Design Patterns</li>
+                    <li>- Dapat menulis kode program dengan rapi dan terstruktur serta terdokumentasi</li>                   <li>- Dapat membuat dokumentasi teknis</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close Project</button>
+                  <button class="btn btn-primary" href="" type="button">
+                    <i class="fa fa-user-plus"></i>
+                    Register</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal13" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">DATABASE ADMINISTRATOR</h2>
+                  <p class="item-intro text-muted">Bertanggung jawab untuk desain, pelaksanaan, pemeliharaan dan perbaikan database organisasi</p>
+                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/position/full-6.jpg') ?>" alt="">
+                  <p>DESCRIPTION</p>
+                  <ul class="list-inline">
+
+                    <li>- Merancang dan membangun sistem manajemen basis data</li>
+                    <li>- Menyiapkan dan menguji basis data baru dan sistem penanganan data</li>
+                    <li>- Memantau dan mengevaluasi efisiensi basis data</li>
+                    <li>- Mempertahankan keamanan dan integritas data</li>
+                    <li>- Mengoptimalkan kinerja jaringan melalui pemantauan dan pemecahan masalah yang sedang berlangsung</li>
+                    <li>- Mengawasi pengembangan database baru</li>
+                    <li>- Membuat dan mengoptimalkan definisi kueri kompleks yang memungkinkan data diekstraksi</li>
+                    <li>- Melatih rekan kerja tentang cara memasukkan dan mengekstrak data</li>
+                    <li>- Mengidentifikasi pertanyaan lambat dan menyarankan alternatif</li>
+
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close Project</button>
+                  <button class="btn btn-primary" href="" type="button">
+                    <i class="fa fa-user-plus"></i>
+                    Register</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="<?= base_url('/assets/user/vendor/jquery/jquery.min.js') ?>"></script>

@@ -30,7 +30,7 @@ class login extends CI_Controller {
 	 $id_administrator = $this->AdminModel->login($username, $password);
 
     if($id_administrator){
-        // Buat session
+        // Buat sessio n
         $user_data = array(
             'id_administrator' => $id_administrator,
             'username' => $username,

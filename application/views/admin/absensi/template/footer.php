@@ -78,6 +78,12 @@
 <script src="<?= base_url('assets/admin/js/material-dashboard.js?v=2.1.1') ?>" type="text/javascript"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="<?= base_url('assets/admin/demo/demo.js') ?>"></script>
+
+<script src="<?= base_url('/assets/admin/clockpicker/dist/bootstrap-clockpicker.min.js') ?>"></script>
+<script type="text/javascript">
+$('.clockpicker').clockpicker();
+</script>
+
 <script>
   $(document).ready(function() {
     $().ready(function() {

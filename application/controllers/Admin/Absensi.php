@@ -6,6 +6,7 @@ class Absensi extends CI_Controller {
 		parent::__construct();
 		$this->load->library('form_validation');
 		$this->load->model('AbsensiModel');
+		$this->load->helper('form');
 
 	}
 	public function index()
@@ -29,7 +30,7 @@ class Absensi extends CI_Controller {
 			$this->load->view('admin/absensi/insert');
 			$this->load->view('admin/absensi/template/footer');
 		} else {
-			$this->Absensi_m->insert();
+			$this->AbsensiModel->insert();
 			redirect('Admin/Absensi','refresh');
 		}
 	}

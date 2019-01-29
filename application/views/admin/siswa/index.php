@@ -11,11 +11,6 @@
                   <h4 class="card-title ">Siswa Magang</h4>
                   <p class="card-category">List Siswa yang magang</p>
                   </div>
-                  <div class="col-xs-2">
-                    <a href="<?= base_url('index.php/Admin/SiswaMagang/insert') ?>" rel="tooltip" title="Tambah Data" class="btn btn-secondary">
-                      <i class="material-icons">add_box</i>
-                    </a>
-                  </div>
                 </div>
               </div>
                 <div class="card-body">
@@ -28,7 +23,9 @@
                       <th>Email</th>
                       <th>Jurusan</th>
                       <th>Nama Instansi</th>
+                      <th>Semester</th>
                       <th>Alamat</th>
+                      <th>No. HP</th>
                       <th>Jenis Kelamin</th>
                       <th></th>
                     </thead>
@@ -40,8 +37,10 @@
                           <td><?php echo $value->nama ?></td>
                           <td><?php echo $value->email ?></td>
                           <td><?php echo $value->jurusan ?></td>
-                          <td><?php echo $value->nama_sekolah ?></td>
+                          <td><?php echo $value->nama_instansi ?></td>
+                          <td><?php echo $value->semester ?></td>
                           <td><?php echo $value->alamat ?></td>
+                          <td><?php echo $value->no_hp ?></td>
                           <td><?php echo $value->jenis_kelamin ?></td>
                           <td>
                             <a class="btn btn-sm btn-success" href="#" rel="tooltip" title="Detail"><i class="material-icons">zoom_out_map</i></a>

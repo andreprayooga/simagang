@@ -22,16 +22,9 @@ class NamaInstansiModel extends CI_Model {
 		$new_id = substr("0000".$last_id+1, -4);
 		return "LK".$new_id;
 	}
-	public function insert($foto)
+	public function insert($data)
 	{
-		$set = array(
-			'nama_instansi' => $this->input->post('nama_instansi'),
-			'alamat' => $this->input->post('alamat'),
-			'no_hp' => $this->input->post('no_hp'),
-			'logo_instansi' => $foto,
-			'fk_id_siswa' => $this->input->post('fk_id_siswa'),
-		);
-		$this->db->insert('nama_instansi',$set);
+		  return $this->db->insert('nama_instansi', $data);
 	}
 	public function update($id,$foto)
 	{

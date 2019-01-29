@@ -28,7 +28,6 @@ class PosisiModel extends CI_Model {
 			'nama_posisi' => $this->input->post('nama_posisi'),
 			'fk_id_divisi' => $this->input->post('fk_id_divisi'),
 			'keterangan' => $this->input->post('keterangan'),
-			
 		);
 		$this->db->insert('posisi_magang',$set);
 	}

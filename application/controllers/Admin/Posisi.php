@@ -7,6 +7,7 @@ class Posisi extends CI_Controller {
 		parent::__construct();
 		$this->load->library('form_validation');
 		$this->load->model('PosisiModel');
+		$this->load->helper('form');
 
 	}
 	public function index()

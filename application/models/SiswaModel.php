@@ -22,30 +22,11 @@ class SiswaModel extends CI_Model {
 		$new_id = substr("0000".$last_id+1, -4);
 		return "LK".$new_id;
 	}
-	public function insert($foto)
-	{
-		$set = array(
-			'nim_nisn' => $this->input->post('nim_nisn'),
-			'nama' => $this->input->post('nama'),
-			'email' => $this->input->post('email'),
-			'jurusan' => $this->input->post('jurusan'),
-			'nama_instansi' => $this->input->post('nnama_instansi'),
-			'semester' => $this->input->post('semester'),
-			'alamat' => $this->input->post('alamat'),
-			'no_hp' => $this->input->post('no_hp'),
-			'provinsi' => $this->input->post('provinsi'),
-			'kota' => $this->input->post('kota'),
-			'tempat_lahir' => $this->input->post('tempat_lahir'),
-			'tanggal' => $this->input->post('tanggal'),
-			'bulan' => $this->input->post('bulan'),
-			'tahun' => $this->input->post('tahun'),
-			'username' => $this->input->post('username'),
-			'password' => $this->input->post('password'),
-			'jenis_kelamin' => $this->input->post('jenis_kelamin'),
-			'foto' => $foto,
-		);
-		$this->db->insert('siswa_magang',$set);
-	}
+
+	public function insert($data)
+  {
+    return $this->db->insert('siswa_magang', $data);
+  }
 	public function update($id,$foto)
 	{
 		$set = array(

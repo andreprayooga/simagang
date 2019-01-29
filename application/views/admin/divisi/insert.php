@@ -8,8 +8,7 @@
             <p class="card-category"> Menambah divisi kedalam daftar dengan informasi yang lengkap</p>
           </div>
           <div class="card-body">
-              <?php echo form_open("",array("id"=>"form-input")); ?>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="<?php base_url('index.php/Admin/Divisi/insert') ?>" method="post" enctype="multipart/form-data">
               <div class="row">
                 <div class="col-sm-3">
                   <div class="form-group">
@@ -34,7 +33,6 @@
                         <option value="<?php echo $value['id_pendamping'] ?>"><?php echo $value['nama'] ?></option>
                       <?php endforeach ?>
                     </select>
-                    <div class="invalid-feedback">Pilih dulu kategorinya gan</div>
                   </div>
                 </div>
                 <div class="col-sm-3">
@@ -51,7 +49,6 @@
               <div class="form-group">
                   <label class="bmd-label-floating">Keterangan</label>
                   <textarea type="text" id="keterangan" name="keterangan" class="form-control" value="<?php echo set_value('keterangan') ?>"  cols="10" rows="3" ></textarea>
-                  <?php echo form_close()?>
               </div>
               <div class="form-group">
                 <input class="btn btn-info" type="submit" value="Simpan" >

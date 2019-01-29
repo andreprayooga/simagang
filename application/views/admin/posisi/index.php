@@ -49,7 +49,7 @@
                     <?php foreach ($data as $key => $value): ?>
                       <tr>
                         <td><?php echo ++$key; ?></td>
-                        <td><?php echo $value->nama ?></td>
+                        <td><?php echo $value->nama_posisi ?></td>
                         <td><?php echo $value->fk_id_divisi ?></td>
                         <td><?php echo $value->keterangan ?></td>
                         <td>

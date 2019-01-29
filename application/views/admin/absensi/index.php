@@ -22,7 +22,7 @@
             </div>
             <div class="row">
               <div class="card card-profile">
-                <a href="#" data-toggle="modal" data-target="#exampleModal">
+                <a href="<?= base_url('index.php/Admin/Absensi/insert') ?>">
                   <div class="card-header card-header-danger">
                     <h4 class="card-title">Absensi</h4>
                   </div>

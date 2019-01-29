@@ -22,7 +22,7 @@ class NamaInstansi extends CI_Controller {
 		$this->form_validation->set_rules('nama_instansi','Nama_instansi',"required|trim");
 		$this->form_validation->set_rules('alamat','Alamat',"required");
 		$this->form_validation->set_rules('no_hp','No_hp',"required");
-		// $this->form_validation->set_rules('fk_id_siswa','ID Siswa',"required");
+		$this->form_validation->set_rules('fk_id_siswa','ID Siswa',"required");
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('admin/nama_instansi/template/header');
 			$this->load->view('admin/nama_instansi/insert');
@@ -39,7 +39,7 @@ class NamaInstansi extends CI_Controller {
 			if ( ! $this->upload->do_upload('logo_instansi')){
 				$error = array('error' => $this->upload->display_errors());
 				$this->load->view('admin/nama_instansi/template/header');
-				$this->load->view('admin/nama_instansi/insert',$data);
+				$this->load->view('admin/nama_instansi/insert');
 				$this->load->view('admin/nama_instansi/template/footer');
 			}
 			else{
