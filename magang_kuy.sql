@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 24 Jan 2019 pada 04.23
+-- Generation Time: 30 Jan 2019 pada 05.00
 -- Versi Server: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -38,6 +38,13 @@ CREATE TABLE `absensi` (
   `fk_id_siswa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `absensi`
+--
+
+INSERT INTO `absensi` (`id_absensi`, `tanggal`, `datang`, `pulang`, `aktivitas`, `keterangan`, `fk_id_siswa`) VALUES
+(1, '2019-01-03 00:00:00', '10:15:00', '21:35:00', 'Todir', 'Hadir', 4);
+
 -- --------------------------------------------------------
 
 --
@@ -58,8 +65,8 @@ CREATE TABLE `administrator` (
 --
 
 INSERT INTO `administrator` (`id_administrator`, `nama`, `email`, `username`, `password`, `fk_id_level`) VALUES
-(1, 'Rembrandt', 'ezpz@gmail.com', 'wowo', 'zzz', 1),
-(2, 'Vermin', 'vzz@gmail.com', 'gembel', '12345', 1);
+(1, 'Rembrandt', 'ezpz@gmail.com', 'CV', 'zzz', 1),
+(2, 'Vermin', 'vzz@gmail.com', 'pantek', '12345', 1);
 
 -- --------------------------------------------------------
 
@@ -93,16 +100,25 @@ INSERT INTO `bulan` (`id_bulan`, `nama_bulan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `divisi`
+-- Struktur dari tabel `divisi_magang`
 --
 
-CREATE TABLE `divisi` (
+CREATE TABLE `divisi_magang` (
   `id_divisi` int(11) NOT NULL,
   `nama_divisi` varchar(45) NOT NULL,
-  `fk_id_pendamping` int(11) NOT NULL,
-  `fk_id_siswa` int(11) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
   `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `divisi_magang`
+--
+
+INSERT INTO `divisi_magang` (`id_divisi`, `nama_divisi`, `gambar`, `keterangan`) VALUES
+(1, 'Business Dev Department', 'dev.jpg', 'Createive Hub Operating\r\nIT Sector Community Empowering\r\nPublic Relation & Marketing\r\nCo-Working Station\r\nIT Vokasi Programs'),
+(2, 'Services Department', 'bussines.png', 'Care Center\r\nAccount Representative\r\nClient Support\r\nProject Counselor\r\nAdministrative Support'),
+(3, 'Production Department', 'service.jpg', 'Web HTML Responsive\r\nData Mining & Processing\r\nBackbone IT Construction\r\nMobile Apps Native\r\nDigital Security Services'),
+(4, 'R&D Department', 'html.jpg', 'IT People Development\r\nBlockchain Technology\r\nOptimation Digital Project\r\nNew Product Development\r\nDigital Project Assessment');
 
 -- --------------------------------------------------------
 
@@ -137,7 +153,7 @@ CREATE TABLE `komentar` (
 --
 
 INSERT INTO `komentar` (`id_komentar`, `nama`, `email`, `keterangan`) VALUES
-(1, 'zuzu', 'gunturtegar@gmail.com', 'kadal penyet');
+(1, 'zuzu', 'gunturtegar@gmail.com', 'ww');
 
 -- --------------------------------------------------------
 
@@ -664,12 +680,19 @@ INSERT INTO `kota` (`id_kota`, `fk_id_provinsi`, `nama_kota`) VALUES
 
 CREATE TABLE `nama_instansi` (
   `id_instansi` int(11) NOT NULL,
-  `nama_sekolah` varchar(55) NOT NULL,
+  `nama_instansi` varchar(55) NOT NULL,
   `alamat` varchar(100) NOT NULL,
   `no_hp` varchar(45) NOT NULL,
-  `logo_instansi` varchar(100) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
   `fk_id_siswa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `nama_instansi`
+--
+
+INSERT INTO `nama_instansi` (`id_instansi`, `nama_instansi`, `alamat`, `no_hp`, `gambar`, `fk_id_siswa`) VALUES
+(1, 'POLITEKNIK NEGERI MALANG', 'Jl. Soekarno Hatta No. 9 Malang', '(0341) 404424, 404425', 'LOGO_POLITEKNIK_NEGERI_MALANG.png', 6);
 
 -- --------------------------------------------------------
 
@@ -692,7 +715,9 @@ CREATE TABLE `pendamping_magang` (
 --
 
 INSERT INTO `pendamping_magang` (`id_pendamping`, `nama`, `email`, `no_hp`, `username`, `password`, `fk_id_level`) VALUES
-(1, 'Guntur TS', 'gunturtegar@gmail.com', '087345676098', 'zzz', 'wowo', 3);
+(1, 'Guntur TS', 'gunturtegar@gmail.com', '087345676098', 'zzz', 'wowo', 3),
+(3, 'asa', 'asas@gmail.com', '121212', 'aaasasasa', 'asasasa', 3),
+(4, 'rtthtehrthrt', 'rehr@gmail.com', '32413413', 'jihan', 'jihan', 1);
 
 -- --------------------------------------------------------
 
@@ -722,8 +747,24 @@ CREATE TABLE `posisi_magang` (
   `id_posisi` int(11) NOT NULL,
   `nama_posisi` varchar(45) NOT NULL,
   `fk_id_divisi` int(11) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
   `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `posisi_magang`
+--
+
+INSERT INTO `posisi_magang` (`id_posisi`, `nama_posisi`, `fk_id_divisi`, `gambar`, `keterangan`) VALUES
+(1, 'Production', 1, '78i90', 'dsd'),
+(2, 'Business Dev', 1, '', 'xcbcbv'),
+(3, 'Business Dev', 1, '', '1111'),
+(4, 'Business Dev', 1, '', '111'),
+(5, 'Business Dev', 1, '', '111'),
+(6, 'Services', 1, '', '111'),
+(7, 'Services', 1, '', '111'),
+(8, 'Services', 1, '', '1111'),
+(10, '1111111111', 1, 'Ap9H83SCAAAPEVb1.jpg', '111');
 
 -- --------------------------------------------------------
 
@@ -788,22 +829,36 @@ CREATE TABLE `siswa_magang` (
   `nama` varchar(55) NOT NULL,
   `email` varchar(25) NOT NULL,
   `jurusan` varchar(25) NOT NULL,
-  `nama_sekolah` varchar(45) NOT NULL,
+  `nama_instansi` varchar(45) NOT NULL,
   `semester` int(8) NOT NULL,
   `alamat` varchar(100) NOT NULL,
+  `no_hp` varchar(12) NOT NULL,
   `provinsi` varchar(55) NOT NULL,
   `kota` varchar(55) NOT NULL,
-  `kabupaten` varchar(25) NOT NULL,
-  `alamat_magang` varchar(100) NOT NULL,
   `tempat_lahir` varchar(25) NOT NULL,
-  `tanggal_lahir` date NOT NULL,
-  `foto` varchar(100) NOT NULL,
-  `jenis_kelamin` varchar(15) NOT NULL,
-  `no_hp` varchar(12) NOT NULL,
+  `tanggal_lahir` varchar(45) NOT NULL,
   `username` varchar(45) NOT NULL,
   `password` text NOT NULL,
-  `fk_id_pendamping` int(11) NOT NULL
+  `jenis_kelamin` varchar(15) NOT NULL,
+  `foto` varchar(100) NOT NULL,
+  `fk_id_pendamping` int(11) DEFAULT NULL,
+  `fk_posisi_magang` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `siswa_magang`
+--
+
+INSERT INTO `siswa_magang` (`id_siswa`, `nim_nisn`, `nama`, `email`, `jurusan`, `nama_instansi`, `semester`, `alamat`, `no_hp`, `provinsi`, `kota`, `tempat_lahir`, `tanggal_lahir`, `username`, `password`, `jenis_kelamin`, `foto`, `fk_id_pendamping`, `fk_posisi_magang`) VALUES
+(1, '21345546', 'fghghhhfhhg', 'gunturtegar0@gmai.com', 'sdfhxdbhbh', 'sdasdsd', 5, 'jl. sajofiao', '34567890', '11', '1107', '1101', '2019-01-09', 'gunturtegar', 'f1d51cc9efa0f97091a8cbd3009845f9', 'Laki - Laki', 'AhVKSrVCAAAWZWJ.jpg', 0, 0),
+(2, '', '1', '1@gg.com', '', '', 0, '', '', '', '', '', '2019-01-03', '', '', 'laki_laki', 'AhVKSrVCAAAWZWJ1.jpg', NULL, 0),
+(3, '3', '3', 'd@gg.com', '1', '1', 1, '1', '2', '2', '2', '2', '2019-02-22', '3', '3', 'laki_laki', 'AhVKSrVCAAAWZWJ2.jpg', NULL, 0),
+(4, '1', '1', '1@gg.com', '1', '1', 1, '1', '1', '1', '1', '1', '2019-01-01', '4', '4', 'laki_laki', 'AhVKSrVCAAAWZWJ3.jpg', NULL, 0),
+(5, '1641729100', 'andre ptayoga', 'andre@gmail.com', 'TI', 'poltek', 2, 'jjogja', '1231414141', 'jawa timur', 'Malang', 'jogja', '2019-01-10', 'andre', 'andre', 'laki_laki', 'AhVKSrVCAAAWZWJ4.jpg', NULL, 0),
+(6, '12', 'Guntur Tegar', 'tegar8797@gmail.com', 'IT', 'Poltek ', 6, 'Jln. Saxofone', '434434443', 'Jawa Timur', 'Malang', 'jogja', '2019-01-15', 'gunturtegar', '1212', 'laki_laki', 'me11.jpg', NULL, 0),
+(7, '12', 'Guntur Tegar', 'tegar8797@gmail.com', 'IT', 'Poltek ', 6, 'Jln. Saxofone', '434434443', 'Jawa Timur', 'Malang', 'jogja', '2019-01-15', 'gunturtegar', '1212', 'laki_laki', 'me12.jpg', NULL, 0),
+(8, '12', 'Guntur Tegar', 'tegar8797@gmail.com', 'IT', 'Poltek ', 6, 'Jln. Saxofone', '434434443', 'Jawa Timur', 'Malang', 'jogja', '2019-01-15', 'gunturtegar', 'qwqqwqw', 'laki_laki', 'AhVKSrVCAAAWZWJ5.jpg', NULL, 0),
+(9, '2', '2', '2@cp.com', '2', '2', 2, '2', '2', '2', '2', '2', '0002-02-02', '2', '2', 'laki_laki', 'Ap9H83SCAAAPEVb2.jpg', NULL, 9);
 
 -- --------------------------------------------------------
 
@@ -935,12 +990,10 @@ ALTER TABLE `bulan`
   ADD PRIMARY KEY (`id_bulan`);
 
 --
--- Indexes for table `divisi`
+-- Indexes for table `divisi_magang`
 --
-ALTER TABLE `divisi`
-  ADD PRIMARY KEY (`id_divisi`),
-  ADD KEY `fk_id_pendamping` (`fk_id_pendamping`),
-  ADD KEY `fk_id_siswa` (`fk_id_siswa`);
+ALTER TABLE `divisi_magang`
+  ADD PRIMARY KEY (`id_divisi`);
 
 --
 -- Indexes for table `kegiatan_magang`
@@ -994,7 +1047,8 @@ ALTER TABLE `provinsi`
 --
 ALTER TABLE `siswa_magang`
   ADD PRIMARY KEY (`id_siswa`),
-  ADD KEY `fk_id_pendamping` (`fk_id_pendamping`);
+  ADD KEY `fk_id_pendamping` (`fk_id_pendamping`),
+  ADD KEY `fk_posisi_magang` (`fk_posisi_magang`);
 
 --
 -- Indexes for table `status_level`
@@ -1023,7 +1077,7 @@ ALTER TABLE `tanggal`
 -- AUTO_INCREMENT for table `absensi`
 --
 ALTER TABLE `absensi`
-  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `administrator`
 --
@@ -1035,10 +1089,10 @@ ALTER TABLE `administrator`
 ALTER TABLE `bulan`
   MODIFY `id_bulan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
--- AUTO_INCREMENT for table `divisi`
+-- AUTO_INCREMENT for table `divisi_magang`
 --
-ALTER TABLE `divisi`
-  MODIFY `id_divisi` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `divisi_magang`
+  MODIFY `id_divisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `kegiatan_magang`
 --
@@ -1053,17 +1107,17 @@ ALTER TABLE `kota`
 -- AUTO_INCREMENT for table `nama_instansi`
 --
 ALTER TABLE `nama_instansi`
-  MODIFY `id_instansi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_instansi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `pendamping_magang`
 --
 ALTER TABLE `pendamping_magang`
-  MODIFY `id_pendamping` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_pendamping` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `posisi_magang`
 --
 ALTER TABLE `posisi_magang`
-  MODIFY `id_posisi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_posisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `provinsi`
 --
@@ -1073,7 +1127,7 @@ ALTER TABLE `provinsi`
 -- AUTO_INCREMENT for table `siswa_magang`
 --
 ALTER TABLE `siswa_magang`
-  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `status_level`
 --
@@ -1104,13 +1158,6 @@ ALTER TABLE `absensi`
 --
 ALTER TABLE `administrator`
   ADD CONSTRAINT `administrator_ibfk_1` FOREIGN KEY (`fk_id_level`) REFERENCES `status_level` (`level`);
-
---
--- Ketidakleluasaan untuk tabel `divisi`
---
-ALTER TABLE `divisi`
-  ADD CONSTRAINT `divisi_ibfk_1` FOREIGN KEY (`fk_id_pendamping`) REFERENCES `pendamping_magang` (`id_pendamping`),
-  ADD CONSTRAINT `divisi_ibfk_2` FOREIGN KEY (`fk_id_siswa`) REFERENCES `siswa_magang` (`id_siswa`);
 
 --
 -- Ketidakleluasaan untuk tabel `kegiatan_magang`
