@@ -11,7 +11,7 @@
             <form action="<?= base_url('index.php/Admin/Absensi/insert') ?>" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="bmd-label-floating">Tanggal</label>
-                        <input type="date" id="input-nama" name="nama" class="form-control" value="<?php echo set_value("tanggal") ?>" autocomplete="off">
+                        <input type="date" id="input-tanggal" name="tanggal" class="form-control" value="<?php echo set_value("tangtanggalgal") ?>" autocomplete="off">
                     </div>
                     <div class="row">
                       <div class="col-sm-6">
@@ -43,16 +43,10 @@
                         </div>
                         <div class="row">
                           <div class="col-sm-6">
-                            <div class="form-group">
-                              <label for="keterangan">Keterangan</label>
-                              <select class="custom-select" name="keterangan" required>
-                                <option selected value="">Status Kehadiran</option>
-                                 <option>Hadir</option>
-                                 <option>Izin</option>
-                                 <option>Sakit</option>
-                                 <?php echo set_value('keterangan') ?>
-                              </select>
-                            </div>
+                              <div class="form-group">
+                                      <label class="bmd-label-floating">Keterangan</label>
+                                      <input type="keterangan" id="input-keterangan" name="keterangan" class="form-control" value="<?php echo set_value('keterangan') ?>" autocomplete="off">
+                                  </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-group">

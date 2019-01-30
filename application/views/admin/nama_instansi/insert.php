@@ -22,15 +22,15 @@
                         <input type="text" id="input-no_hp" name="no_hp" class="form-control" value="<?php echo set_value("no_hp") ?>" autocomplete="off">
                     </div>
                     <div class="row">
-                      <div class="col-sm-3">
-                    <div class="form-group">
-                      <label for="input-foto_instansi">Logo Instansi</label>
-                    </div>
-                    <label class="file">
-                      <input type="file" class="form-control-file" name="logo_instansi">
-                      <span class="file-custom"></span>
-                    </label>
-                  </div>
+                      <div class="col-sm-2">
+                        <div class="form-group">
+                          <label for="foto">Logo Instansi</label>
+                        </div>
+                        <label class="file">
+                          <input type="file" class="form-control-file" name="gambar">
+                          <span class="file-custom"></span>
+                        </label>
+                      </div>
                     <div class="col-sm-4">
                       <div class="form-group">
                         <label for="kondisi_model">Pilih Siswa</label>

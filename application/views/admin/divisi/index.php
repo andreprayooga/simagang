@@ -11,11 +11,6 @@
                   <h4 class="card-title ">Divisi Magang</h4>
                   <p class="card-category">Table Divisi</p>
                   </div>
-                  <!-- <div class="">
-                    <a href="<?= base_url('index.php/Admin/Divisi/insert') ?>" rel="tooltip" title="Tambah Data" class="btn btn-secondary">
-                      <i class="material-icons">add_box</i>
-                    </a>
-                  </div> -->
                 </div>
               </div>
                 <div class="card-body">
