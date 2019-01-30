@@ -6,7 +6,7 @@
             <div class="col-md-3">
               <div class="row">
               <div class="card card-profile">
-                <a href="<?php echo base_url('Barang/create')?>">
+                <a href="">
                   <div class="card-header card-header-info">
                     <h4 class="card-title">List Posisi Magang</h4>
                   </div>
@@ -17,7 +17,6 @@
                   <p class="card-description">
                     Diposisi manakah yang akan di ambil siswa, yang berguna untuk melatih bakat yang dimilikinya
                   </p>
-                  <!-- <?php echo anchor('Barang/create', 'Tambah', array('class' => 'btn btn-info btn-round')); ?> -->
                 </div>
               </div>
             </div>
@@ -70,3 +69,5 @@
             </div>
             </div>
           </div>
+        </div>
+      </div>

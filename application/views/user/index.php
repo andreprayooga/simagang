@@ -343,15 +343,50 @@ internasional.</p><br>
           </div>
         </div>
         <div class="row">
-          <?php foreach ($this->db->get('divisi_magang')->result() as $key => $value): ?>
           <div class="col-sm-3">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="<?= base_url('/assets/uploads/divisi/'.$value->gambar) ?>" alt="">
-              <h4><?php echo $value->nama_divisi ?></h4>
-              <p class="text-muted" align="justify"><?php echo $value->keterangan ?></p>
+              <img class="mx-auto rounded-circle" src="<?= base_url('/assets/user/img/team/dev.jpg') ?>" alt="">
+              <h4>Business Dev Department </h4>
+              <p class="text-muted">Createive Hub Operating<br>
+                  IT Sector Community Empowering<br>
+                  Public Relation & Marketing<br>
+                  Co-Working Station<br>
+                  IT Vokasi Programs</p>
             </div>
           </div>
-          <?php endforeach; ?>
+          <div class="col-sm-3">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="<?= base_url('/assets/user/img/team/bussines.png') ?>" alt="">
+              <h4>Services Department</h4>
+              <p class="text-muted">Care Center<br>
+                  Account Representative<br>
+                  Client Support<br>
+                  Project Counselor<br>
+                  Administrative Support</p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="<?= base_url('/assets/user/img/team/service.jpg') ?>" alt="">
+              <h4>Production Department</h4>
+              <p class="text-muted">Web HTML Responsive<br>
+                  Data Mining & Processing<br>
+                  Backbone IT Construction<br>
+                  Mobile Apps Native<br>
+                  Digital Security Services</p>
+            </div>
+          </div>
+        <div class="col-sm-3">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="<?= base_url('/assets/user/img/team/html.jpg') ?>" alt="">
+              <h4>R&D Department</h4>
+              <p class="text-muted">IT People Development<br>
+                Blockchain Technology<br>
+                Optimation Digital Project<br>
+                New Product Development<br>
+                Digital Project Assessment</p>
+            </div>
+          </div>
         </div>
           </div>
         </div>
@@ -531,16 +566,16 @@ Contact :
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase"><?php echo $value->nama_posisi ?></h2>
                 <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/uploads/siswa/'.$value->gambar)?>" alt="">
-                <p>
-                  <?php echo $value->keterangan ?>
+                <center><p style="word-wrap: break-word;"></p></center>
+                  <?php echo str_replace("-","<br>-", $value->keterangan); ?>
                 </p>
-                <ul class="list-inline">
+               <!--  <ul class="list-inline">
                   <li>Fitur meliputi :</li>
                   <li>1. Platform E-Commerce</li>
                   <li>2. Manajement Keuangan</li>
                   <li>3. HR Management</li>
                   <li>4. Platform Analytics</li>
-                </ul>
+                </ul> -->
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fa fa-times"></i>
                   Close Project</button>

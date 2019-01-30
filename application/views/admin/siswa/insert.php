@@ -96,7 +96,7 @@
                   <div class="form-group">
                     <div class="row">
                       <div class="col-md-3">
-                        <label for="tempat_lahir" class="bmd-label-floating">Tampat Lahir</label>
+                        <label for="tempat_lahir" class="bmd-label-floating">Tempat Lahir</label>
                       </div>
                       <div class="col-md-9">
                         <select class="custom-select" name="tempat_lahir"class="form-control" id="tempat_lahir">

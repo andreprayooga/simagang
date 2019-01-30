@@ -23,7 +23,7 @@
                         <div class="form-group">
                           <label for="nama_divisi">Pilih Divisi</label>
                           <select class="custom-select" name="fk_id_divisi"class="form-control">
-                            <?php foreach ($this->db->get('divisi')->result_array() as $key => $value): ?>
+                            <?php foreach ($this->db->get('divisi_magang')->result_array() as $key => $value): ?>
                               <option value="<?php echo $value['id_divisi'] ?>"><?php echo $value['nama_divisi'] ?></option>
                             <?php endforeach ?>
                           </select>

@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group">
                             <label class="bmd-label-floating">Keterangan</label>
-                            <input type="text" id="input-keterangan" name="keterangan" class="form-control" value="<?php echo $divisi->keterangan ?>">
+                            <text type="text" id="input-keterangan" name="keterangan" class="form-control" value="<?php echo $divisi->keterangan ?>">
                         </div>
                   <div class="form-group">
                     <input class="btn btn-success" type="submit" value="Update">

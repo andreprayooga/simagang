@@ -23,7 +23,7 @@
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="azure" data-background-color="white" data-image="<?= base_url('/assets/admin/img/sidebar-1.jpg') ?>">
+    <div class="sidebar" data-color="orange" data-background-color="white" data-image="<?= base_url('/assets/admin/img/sidebar-1.jpg') ?>">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -104,6 +104,9 @@
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="#pablo">Nama Instansi</a>
+          </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>

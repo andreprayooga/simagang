@@ -79,9 +79,10 @@
                             <td><?php echo $value->fk_id_siswa ?></td>
 
                             <td>
-                              <a class="btn btn-sm btn-success" href="#" rel="tooltip" title="Detail"><i class="material-icons">zoom_out_map</i></a>
-                              <a class="btn btn-sm btn-warning" href="<?php echo site_url("Admin/".$c_name."/update/".$value->id_absensi) ?>"  rel="tooltip" title="Edit"><i class="material-icons">edit</i></a>
-                              <a href="<?php echo site_url("Admin/".$c_name."/delete/".$value->id_absensi) ?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-sm btn-danger"  rel="tooltip" title="Hapus"><i class="material-icons">delete</i></a>
+                              <a class="badge badge-warning" href="<?php echo site_url("Admin/".$c_name."/update/".$value->id_absensi) ?>"><i class="fa fa-pencil"></i> Edit</a>
+                              <a href="<?php echo site_url("Admin/".$c_name."/delete/".$value->id_absensi) ?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-sm btn-danger">
+                                <i class="fa fa-trash"></i> Hapus
+                              </a>
                             </td>
                           </tr>
                           <?php endforeach ?>

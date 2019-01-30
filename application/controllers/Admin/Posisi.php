@@ -78,7 +78,7 @@ class Posisi extends CI_Controller {
 
 			if (!$this->upload->do_upload('gambar')) {
 				$data['error'] = $this->upload->display_errors();
-				$this->load->view('user/register',$data);
+				$this->load->view('admin/posisi/index',$data);
 			}else{
 				$upload_data = $this->upload->data();
 				#get data
