@@ -113,6 +113,10 @@
                                   <input type="file" name="foto" id="foto" />
                                   <?php echo (isset($error) ? $error : "") ?>
                               </div>
+                              <div class="form-input">
+                                  <label for="aa" class="required">Nama Posisi</label>
+                                  <input type="text" id="aa" value="<?php echo $posisi->nama_posisi ?>"/>
+                              </div>
                             </div>
                         </div>
                         <div class="form-submit">

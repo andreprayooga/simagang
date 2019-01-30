@@ -11,6 +11,7 @@
                     <h4 class="card-title">List Posisi Magang</h4>
                   </div>
                 </a>
+
                 <div class="card-body">
                   <h6 class="card-category text-gray">Penempatan Posisi Siswa</h6>
                   <p class="card-description">
@@ -42,6 +43,7 @@
                     <th>ID.</th>
                     <th>Nama Posisi</th>
                     <th>ID Divisi</th>
+                    <th>Gambar</th>
                     <th>Keterangan</th>
                     <th></th>
                   </thead>
@@ -49,8 +51,9 @@
                     <?php foreach ($data as $key => $value): ?>
                       <tr>
                         <td><?php echo ++$key; ?></td>
-                        <td><?php echo $value->nama_posisi ?></td>
+                        <td><?php echo $value->nama_posisi   ?></td>
                         <td><?php echo $value->fk_id_divisi ?></td>
+                        <td><?php echo $value->gambar ?></td>
                         <td><?php echo $value->keterangan ?></td>
                         <td>
                           <a class="btn btn-sm btn-success" href="#" rel="tooltip" title="Detail"><i class="material-icons">zoom_out_map</i></a>

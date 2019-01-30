@@ -404,84 +404,21 @@ internasional.</p><br>
         </div>
 
         <div class="row">
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal8">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                </div>
-              </div>
-              <img class="img-fluid" src="<?= base_url('/assets/user/img/position/thumbnail-1.jpg') ?>" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>SOFTWARE ENGINEER - PROGRAMMER </h4>
-            </div>
-          </div>
 
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal9">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                </div>
-              </div>
-              <img class="img-fluid" src="<?= base_url('/assets/user/img/position/thumbnail-5.jpg') ?>" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>IT<br>DATA ANALYST </h4>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal10">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                </div>
-              </div>
-              <img class="img-fluid" src="<?= base_url('/assets/user/img/position/thumbnail-3.jpg') ?>" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>MULTIMEDIA - GRAPHIC DESIGNER</h4>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal11">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                </div>
-              </div>
-              <img class="img-fluid" src="<?= base_url('/assets/user/img/position/thumbnail-4.jpg') ?>" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>ANDROID<br>DEVELOPER</h4>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal12">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                </div>
-              </div>
-              <img class="img-fluid" src="<?= base_url('/assets/user/img/position/thumbnail-2.jpg') ?>" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>NETWORK<br>ENGINEER</h4>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal13">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                </div>
-              </div>
-              <img class="img-fluid" src="<?= base_url('/assets/user/img/position/thumbnail-6.jpg') ?>" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>DATABASE ADMINISTRATOR</h4>
-            </div>
-          </div>
-
+<?php foreach ($this->db->get('posisi_magang')->result() as $key => $value): ?>
+  <div class="col-md-4 col-sm-6 portfolio-item">
+    <a class="portfolio-link" data-toggle="modal" href="#posisi<?php echo $value->id_posisi ?>">
+      <div class="portfolio-hover">
+        <div class="portfolio-hover-content">
+        </div>
+      </div>
+      <img class="img-fluid" src="<?= base_url('/assets/uploads/siswa/'.$value->gambar) ?>" alt="">
+    </a>
+    <div class="portfolio-caption">
+      <h4><?php echo $value->nama_posisi ?></h4>
+    </div>
+  </div>
+<?php endforeach; ?>
         </div>
       </div>
     </section>
@@ -613,488 +550,49 @@ Contact :
     <!-- Portfolio Projek -->
 
     <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
+<?php foreach ($this->db->get('posisi_magang')->result() as $key => $value): ?>
+  <div class="portfolio-modal modal fade" id="posisi<?php echo $value->id_posisi ?>" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
           </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Smart Warehouse</h2>
-                  <p class="item-intro text-muted">Coday Coffee with Blockchain Technology .</p>
-                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/portfolio/01-full.jpg')?>" alt="">
-                  <p>Smart Warehouse, merupakan layanan sistem informasi yang kami kembangkan menggunakan teknologi blockchain (yang merupakan teknologi baru saat ini) yang dapat memaksimalkan pemasok, pergudangan serta pendistibusian yang aman ke seluruh outlet yang saling terintegrasi dan meminimalkan adanya kecurangan harga (baik harga pasok maupun harga
-                  jual). Smart Warehouse memudahkan pencarian akses yang lebih dekat
-                  dengan pemasok dan saluran distribusi, serta dapat memahami permintaan
-                  sesuai dengan wilayah geografis tertentu sehingga permintaan serta
-                  pendistribusian menjadi merata tidak hanya Konsumen (pengguna atau
-                  pedagang) tetapi juga bagi petani kopi. Sehingga tidak hanya berfokus pada
-                  produksi saja, tetapi juga dapat membawa semua pemangku kepentingan
-                  untuk bergerak menuju industri yang transparan, menguntungkan, produktif,
-                  berkualitas tinggi, dan berkelanjutan.</p>
-                  <ul class="list-inline">
-                    <li>Fitur meliputi :</li>
-                    <li>1. Platform E-Commerce</li>
-                    <li>2. Manajement Keuangan</li>
-                    <li>3. HR Management</li>
-                    <li>4. Platform Analytics</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase"><?php echo $value->nama_posisi ?></h2>
+                <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/uploads/siswa/'.$value->gambar)?>" alt="">
+                <p>
+                  <?php echo $value->keterangan ?>
+                </p>
+                <ul class="list-inline">
+                  <li>Fitur meliputi :</li>
+                  <li>1. Platform E-Commerce</li>
+                  <li>2. Manajement Keuangan</li>
+                  <li>3. HR Management</li>
+                  <li>4. Platform Analytics</li>
+                </ul>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fa fa-times"></i>
+                  Close Project</button>
 
-                </div>
+                  <a class="btn btn-success" href="<?php echo base_url('index.php/Register/index/'.$value->id_posisi); ?>">
+                    <i class="fa fa-times"></i>
+                    Register</a>
+
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">LAKUPAY</h2>
-                  <p class="item-intro text-muted">With Lakupay you develop a business that is always protifable, convenient and easy. Business is safe at hand.</p>
-                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/portfolio/02-full.jpg') ?>" alt="">
-                  <p>Lakupay membantu bisnis Anda tumbuh dengan menawarkan sistem pembayaran yang juga memberi Anda manfaat. Setelah terdaftar, Anda dapat menikmati semua fitur layanan dan produk yang tersedia. Kami menyediakan PPOB, tiket, dan keanggotaan yang membantu Anda mengelola bisnis Anda dan berinteraksi dengan pelanggan.</p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">MBEJO</h2>
-                  <p class="item-intro text-muted">MBELINGER JOGJA "Berdiri Sejak Miring"</p>
-                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/portfolio/03-full.jpg') ?>" alt="">
-                  <p>Factory Outlet sekaligus Destinasi Wisata UNIK JOGJA. Yang mengangkat tema budaya. Yang dikemas secara kekinian. Dituangkan ke bermacam medium: Kaos, Merchandise,dll. Oleh-oleh dari Jogja yang Istimewa. JOGJA CREATIVE BUNKER, ekplorasi budaya oleh seniman muda jogja yang hanya ada satu-satunya.</p>
-                  <ul class="list-inline">
-                    <li>Fitur meliputi :</li>
-                    <li>1. POS System</li>
-                    <li>2. eCommerce System</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Milagros</h2>
-                  <p class="item-intro text-muted">Back to Natural with Healthy Life</p>
-                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/portfolio/04-full.jpg') ?>" alt="">
-                  <p>PT. Milagros Indonesia Megah adalah sebuah institusi bisnis yang mengkhususkan dirinya untuk bergerak di bidang Customer Refferal Program. Sebuah program yang menawarkan produk dan memberi kesempatan kepada masyarakat luas untuk membangun dan memiliki bisnisnya sendiri. Jiwa entrepreneurship dan kemandirian ekonomi adalah inspirasi besar yang menjiwai latar belakang berdirinya perusahaan ini.	 <br>
-
-       Demi mengawal kelancaran program yang diusungnya, perusahaan ini berkomitmen untuk menghadirkan produk yang berkualitas serta jelas fungsi dan manfaatnya. Selain itu dalam program yang ditawarkan, asas "Win Win Solution" adalah landasan dasar yang dipilih demi membangun kesejahteraan perusahaan dan para mitranya.<br>
-
-Salam Sehat, Sukses, dan Sejahtera untuk kita semua.</p>
-                  <ul class="list-inline">
-                    <li>Fitur Meliput</li>
-                    <li>1. Warehouse System</li>
-                    <li>2. Stockist System </li>
-<li>3. Great System</li>
-<li>4. Online Event Registration System</li>
-
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">The Esoftdream</h2>
-                  <p class="item-intro text-muted">Dream big. Business is Good
-We understand your business needs today</p>
-                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/portfolio/05-full.jpg') ?>" alt="">
-                  <p>Ketika melakukan hal-hal dengan sepenuh hati, Esoftdream menyediakan layanan yang sangat baik dengan cara yang sama. Kami melayani dengan hati dan memberikan hasil kualitas premium untuk setiap proyek. Sejak 2008 kami telah berurusan dengan berbagai klien yang menjalankan bisnis Multi-Level Marketing (MLM). Pengalaman bertahun-tahun dalam mengembangkan sistem pemasaran jaringan menjadikannya keahlian kami. Kami selalu memastikan perusahaan mitra menjadi pemimpin di bidang di mana mereka melakukan bisnis. Fokus kami adalah pada sistem pemasaran jaringan yang andal, jadi kami senang membuat perusahaan Anda di atas.</p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Lakumarket</h2>
-                  <p class="item-intro text-muted">Pusatnya Barang Paling Laku & Produk Paling Lengkap</p>
-                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/portfolio/06-full.jpg') ?>" alt="">
-                  <p>Lakumarket adalah pusat jual beli online barang bekas berkualitas terbaik di
-Indonesia. Inilah Marketplace bagi para pengusaha kecil, menengah maupun
-Anda yang sudah memiliki usaha yang sedang berkembang. Siapapun yang
-sudah memiliki akun di Lakumarket langsung bisa memasang iklan dan
-melakukan proses jual-beli dengan masa aktif seperti diatur di dalam Syarat
-dan Ketentuan. Pasarkan produk Anda di Lakumarket untuk jangkauan lebih
-luas dan jaringan yang tak terbatas.</p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-     <!-- Portfolio Position -->
-
-    <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">SOFTWARE ENGINEER</h2>
-                  <p class="item-intro text-muted">PROGRAMMER</p>
-                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/position/full-1.jpg')?>" alt="">
-                  <p>DESCRIPTION</p>
-                  <ul class="list-inline">
-
-                    <li>- Menjaga dan meningkatkan situs web</li>
-                    <li>- Optimalkan aplikasi untuk kecepatan maksimum</li>
-                    <li>- Desain fitur berbasis seluler</li>
-                    <li>- Berkolaborasi dengan pengembang back-end dan desainer web untuk meningkatkan kegunaan</li>
-                    <li>- Dapatkan umpan balik dari, dan membangun solusi untuk, pengguna dan pelanggan</li>
-                    <li>- Menulis dokumen persyaratan fungsional dan panduan</li>
-                    <li>- Buat maket dan prototipe berkualitas</li>
-                    <li>- Bantu pengembang back-end dengan pengkodean dan pemecahan masalah</li>
-                    <li>- Pastikan standar grafis berkualitas tinggi dan konsistensi mereka</li>
-                    <li>- Tetap up-to-date tentang teknologi yang muncul</p></li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                  <button class="btn btn-primary" href="<?= base_url('index.php/Register') ?>" type="button">
-                    <i class="fa fa-user-plus"></i>
-                    Register</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">NETWORK ENGINEER</h2>
-                  <p class="item-intro text-muted">Mengurusi jaringan komputer/telekomunikasi di sebuah organisasi</p>
-                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/position/full-2.jpg') ?>" alt="">
-                 <p>DESCRIPTION</p>
-                  <ul class="list-inline">
-
-                    <li>- Merancang dan mengimplementasikan solusi jaringan baru dan / atau meningkatkan efisiensi jaringan saat ini</li>
-                    <li>- Pasang, konfigurasikan, dan dukung peralatan jaringan termasuk router, server proxy, sakelar, akselerator WAN, DNS dan DHCP</li>
-                    <li>-Menyediakan peralatan jaringan dan mengelola subkontraktor yang terlibat dengan pemasangan jaringan</li>
-                    <li>- Mengkonfigurasi firewall, perutean, dan pengalihan untuk memaksimalkan efisiensi dan keamanan jaringan</li>
-                    <li>- Mengoptimalkan kinerja jaringan melalui pemantauan dan pemecahan masalah yang sedang berlangsung</li>
-                    <li>- Atur peningkatan terjadwal</li>
-                    <li>- Selidiki kesalahan dalam sistem jaringan</li>
-                    <li>- Monitor dan perbarui peralatan jaringan ke rilis firmware terbaru</li>
-                    <li>- Kumpulkan status jaringan dan laporkan ke pemangku kepentingan utama</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                  <button class="btn btn-primary" href="" type="button">
-                    <i class="fa fa-user-plus"></i>
-                    Register</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">MULTIMEDIA</h2>
-                  <p class="item-intro text-muted">GRAPHIC DESIGNER</p>
-                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/position/full-3.jpg') ?>" alt="">
-                  <p>Bertanggung jawab dalam merancang, melakukan riset dan mendesain penampilan produk digital untuk Aplikasi dan Website.</p>
-                  <ul class="list-inline">
-
-                    <li>- Membuat dan menyediakan Flitts dengan konten yang dirancang sendiri.</li>
-                    <li>- Merancang antarmuka pengguna untuk situs web dan aplikasi baru dan yang dirancang ulang</li>
-                    <li>- Buat wireframes, maket, dan prototipe situs Web responsive (menggunakan zeplin dan sejenisnya) *akan diajarkan cara penggunaan zeplin</li>
-                    <li>- Bekerja pada proyek dengan cakupan beragam dengan kemampuan yang tajam untuk beralih antara tugas kreatif</li>
-                    <li>- Berfokus pada estetika material, ide, konseptualisasi dan penerjemahan strategi pasar; secara efektif mendesain sistem dan tata letak yang memaksimalkan keterbacaan dan komunikasi pesan.</li>
-                    <li>- Membuat desain yang unik dan menarik untuk mendukung kebutuhan divisi lain seperti team sales,team sosmed,dll.</li>
-                    <li>- Mampu menyelesaikan design corporate identity seperti logo dan marketing material seperti company profile, poster, brochures, dan lainnya</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                  <button class="btn btn-primary" href="" type="button">
-                    <i class="fa fa-user-plus"></i>
-                    Register</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">IT DATA ANALYST</h2>
-                  <p class="item-intro text-muted">Mengembangkan dan mengelola data untuk menjadi informasi, baik dalam bentuk laporan/dashboard untuk mendukung kebutuhan bisnis, baik yang bersifat strategic maupun untuk operasional.</p>
-                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/position/full-5.jpg') ?>" alt="">
-                  <p>DESCRIPTION</p>
-                  <ul class="list-inline">
-
-                    <li>- Memproses permintaan data dari user setelah mendapat persetujuan dari Direksi</li>
-                    <li>- Mengecek apakah cashflow report rutin harian/ mingguan/ bulanan sudah jalan</li>
-                    <li>- Sesuai schedulenya atau belum, Membantu user memperbaiki cashflow report bila</li>
-                    <li>- Ada data yang salah/ tidak sesuai.</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                  <button class="btn btn-primary" href="" type="button">
-                    <i class="fa fa-user-plus"></i>
-                    Register</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">ANDROID DEVELOPER</h2>
-                  <p class="item-intro text-muted">Mengembangkan aplikasi untuk perangkat dengan sistem operasi Android</p>
-                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/position/full-4.jpg') ?>" alt="">
-                  <p>DESCRIPTION</p>
-                  <ul class="list-inline">
-
-                    <li>- Menguasai pemrograman aplikasi Android native menggunakan Java & Kotlin</li>
-                    <li>- Menguasai Android Studio</li>
-                    <li>- Memahami XML, Android SDK, Firebase, MySQL, Google API, Material Design</li>
-                    <li>- Dapat menggunakan Git untuk kolaborasi tim</li>
-                    <li>- Mempunyai pemahaman yang baik mengenai konsep OOP, MVC, CRUD, OOAD dan</li>
-                    <li>- Design Patterns</li>
-                    <li>- Dapat menulis kode program dengan rapi dan terstruktur serta terdokumentasi</li>                   <li>- Dapat membuat dokumentasi teknis</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                  <button class="btn btn-primary" href="" type="button">
-                    <i class="fa fa-user-plus"></i>
-                    Register</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-    <!-- Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal13" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">DATABASE ADMINISTRATOR</h2>
-                  <p class="item-intro text-muted">Bertanggung jawab untuk desain, pelaksanaan, pemeliharaan dan perbaikan database organisasi</p>
-                  <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/user/img/position/full-6.jpg') ?>" alt="">
-                  <p>DESCRIPTION</p>
-                  <ul class="list-inline">
-
-                    <li>- Merancang dan membangun sistem manajemen basis data</li>
-                    <li>- Menyiapkan dan menguji basis data baru dan sistem penanganan data</li>
-                    <li>- Memantau dan mengevaluasi efisiensi basis data</li>
-                    <li>- Mempertahankan keamanan dan integritas data</li>
-                    <li>- Mengoptimalkan kinerja jaringan melalui pemantauan dan pemecahan masalah yang sedang berlangsung</li>
-                    <li>- Mengawasi pengembangan database baru</li>
-                    <li>- Membuat dan mengoptimalkan definisi kueri kompleks yang memungkinkan data diekstraksi</li>
-                    <li>- Melatih rekan kerja tentang cara memasukkan dan mengekstrak data</li>
-                    <li>- Mengidentifikasi pertanyaan lambat dan menyarankan alternatif</li>
-
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                  <button class="btn btn-primary" href="" type="button">
-                    <i class="fa fa-user-plus"></i>
-                    Register</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+<?php endforeach; ?>
 
 
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Crossfits &mdash; Colorlib Website Template</title>
@@ -15,23 +15,23 @@
     <link rel="stylesheet" href="<?php echo base_url('/assets/home/css/owl.theme.default.min.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('/assets/home/css/bootstrap-datepicker.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('/assets/home/css/animate.css') ?>">
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
-    
-    
-    
+
+
+
     <link rel="stylesheet" href="<?php echo base_url('/assets/home/fonts/flaticon/font/flaticon.css') ?>">
-  
+
     <link rel="stylesheet" href="<?php echo base_url('/assets/home/css/aos.css') ?>">
 
     <link rel="stylesheet" href="<?php echo base_url('/assets/home/css/style.css') ?>">
-    
+
   </head>
   <body style="background-image: url('<?php echo base_url('assets/home/images/bg.jpg'); ?>');">
-  
+
   <div class="site-wrap">
 
-    
+
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -41,10 +41,10 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
-    
-    
+
+
     <div class="site-navbar-wrap js-site-navbar bg-white">
-      
+
       <div class="container">
         <div class="site-navbar bg-light">
           <div class="py-1">
@@ -71,7 +71,7 @@
                               <li><a href="program.html">Boxing</a></li>
                               <li><a href="program.html">Running</a></li>
                               <li><a href="program.html">Jogging</a></li>
-                              
+
                             </ul>
                           </li>
 
@@ -90,10 +90,10 @@
         </div>
       </div>
     </div>
-  
+
     <!-- <div style="height: 113px;"></div> -->
     <div class="slide-one-item home-slider owl-carousel">
-      
+
       <div class="site-blocks-cover inner-page" style="background-image: url(images/hero_b1_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <!-- <div class="container"> -->
           <div class="row align-items-center justify-content-center">
@@ -103,7 +103,7 @@
             </div>
           </div>
         <!-- </div> -->
-      </div>  
+      </div>
 
       <div class="site-blocks-cover inner-page" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <!-- <div class="container"> -->
@@ -114,7 +114,7 @@
             </div>
           </div>
         <!-- </div> -->
-      </div> 
+      </div>
     </div>
 
     <div class="site-section">
@@ -212,9 +212,9 @@
             <p><a href="#" class="btn btn-primary text-white">Make Me Your Trainer</a></p>
           </div>
         </div>
-      </div>  
+      </div>
     </div>
-    
+
     <div class="site-section">
       <div class="container">
         <div class="row mb-5">
@@ -279,7 +279,7 @@
     <div class="site-section block-14 bg-light nav-direction-white">
 
       <div class="container">
-        
+
         <div class="row mb-5">
           <div class="col-md-12">
             <h2 class="site-section-heading text-center">Testimonies</h2>
@@ -287,7 +287,7 @@
         </div>
 
         <div class="nonloop-block-14 owl-carousel">
-          
+
           <div class="p-5">
             <div class="d-flex block-testimony">
               <div class="person mr-3">
@@ -336,13 +336,13 @@
         </div>
 
       </div>
-      
+
     </div>
 
 
     <footer class="site-footer">
       <div class="container">
-        
+
 
         <div class="row">
           <div class="col-md-4">
@@ -376,7 +376,7 @@
             </div>
           </div>
 
-          
+
           <div class="col-md-2">
             <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
               <div class="col-md-12">
@@ -398,7 +398,7 @@
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
-          
+
         </div>
       </div>
     </footer>

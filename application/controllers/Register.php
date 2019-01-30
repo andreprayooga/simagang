@@ -3,13 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Register extends CI_Controller {
 
-	public function index()
+	public function index($id = null)
 	{
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('nama',"Nama","required");
-
+		$data = [
+			'posisi' => $this->db->where('id_posisi',$id)->get('posisi_magang')->row(0),
+		];
 		if ($this->form_validation->run() == false) {
-					$this->load->view('user/register');
+					$this->load->view('user/register',$data);
 		}else{
 			$config['upload_path'] = "./assets/uploads/siswa/";
 			$config['allowed_types'] = "gif|jpg|png";
@@ -42,6 +44,7 @@ class Register extends CI_Controller {
 					'password' => $this->input->post('password'),
 					'jenis_kelamin' => $this->input->post('jenis_kelamin'),
 					'foto' => $upload_data['file_name'],
+					'fk_posisi_magang' => $id,
 				);
 
 				$this->db->insert('siswa_magang',$set);

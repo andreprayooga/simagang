@@ -9,18 +9,12 @@
           </div>
           <div class="card-body">
             <form action="<?php base_url('index.php/Admin/Posisi/insert') ?>" method="post" enctype="multipart/form-data">
+
               <div class="row">
               <div class="col-sm-6">
                     <div class="form-group">
                         <label class="bmd-label-floating">Nama Posisi</label>
-                        <select class="custom-select" name="nama_posisi" >
-                          <option selected value="">Pilih Jenis Posisi</option>
-                           <option>Business Dev</option>
-                           <option>Services</option>
-                           <option>Production</option>
-                           <option>R&D</option>
-                           <?php echo set_value('nama_posisi') ?>
-                        </select>
+                        <input type="text" name="nama_posisi" value="" class="form-control">
                     </div>
                   </div>
                 </div>
@@ -35,6 +29,11 @@
                           </select>
                         </div>
                       </div>
+                    </div>
+                    <div class="form-input">
+                        <label for="gambar" class="required">Gambar</label>
+                        <input type="file" name="gambar" id="gambar" />
+                        <?php echo (isset($error) ? $error : "") ?>
                     </div>
                     <div class="form-group">
                         <label class="bmd-label-floating">Keterangan</label>
