@@ -343,50 +343,15 @@ internasional.</p><br>
           </div>
         </div>
         <div class="row">
+          <?php foreach ($this->db->get('divisi_magang')->result() as $key => $value): ?>
           <div class="col-sm-3">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="<?= base_url('/assets/user/img/team/dev.jpg') ?>" alt="">
-              <h4>Business Dev Department </h4>
-              <p class="text-muted">Createive Hub Operating<br>
-                  IT Sector Community Empowering<br>
-                  Public Relation & Marketing<br>
-                  Co-Working Station<br>
-                  IT Vokasi Programs</p>
+              <img class="mx-auto rounded-circle" src="<?= base_url('/assets/uploads/divisi/'.$value->gambar) ?>" alt="">
+              <h4><?php echo $value->nama_divisi ?></h4>
+              <p class="text-muted" align="justify"><?php echo $value->keterangan ?></p>
             </div>
           </div>
-          <div class="col-sm-3">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="<?= base_url('/assets/user/img/team/bussines.png') ?>" alt="">
-              <h4>Services Department</h4>
-              <p class="text-muted">Care Center<br>
-                  Account Representative<br>
-                  Client Support<br>
-                  Project Counselor<br>
-                  Administrative Support</p>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="<?= base_url('/assets/user/img/team/service.jpg') ?>" alt="">
-              <h4>Production Department</h4>
-              <p class="text-muted">Web HTML Responsive<br>
-                  Data Mining & Processing<br>
-                  Backbone IT Construction<br>
-                  Mobile Apps Native<br>
-                  Digital Security Services</p>
-            </div>
-          </div>
-        <div class="col-sm-3">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="<?= base_url('/assets/user/img/team/html.jpg') ?>" alt="">
-              <h4>R&D Department</h4>
-              <p class="text-muted">IT People Development<br>
-                Blockchain Technology<br>
-                Optimation Digital Project<br>
-                New Product Development<br>
-                Digital Project Assessment</p>
-            </div>
-          </div>
+          <?php endforeach; ?>
         </div>
           </div>
         </div>
