@@ -3,17 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class DivisiModel extends CI_Model {
 	public function get()
 	{
-		$this->db->select("divisi.*");
+		$this->db->select("divisi_magang.*");
 		$this->db->order_by('nama_divisi','desc');
-		return $this->db->get('divisi')->result();
+		return $this->db->get('divisi_magang')->result();
 	}
 	public function get_id($id)
 	{
-		return $this->db->where('id_divisi',$id)->get('divisi')->row(0);
+		return $this->db->where('id_divisi',$id)->get('divisi_magang')->row(0);
 	}
 	public function auto_code()
 	{
-		$last_id_sql = $this->db->query("select id from divisi order by id desc limit 1");
+		$last_id_sql = $this->db->query("select id from divisi_magang order by id desc limit 1");
 		if($last_id_sql->num_rows() == 0){
 			$last_id = 0;
 		}else{
@@ -26,12 +26,10 @@ class DivisiModel extends CI_Model {
 	{
 		$set = array(
 			'nama_divisi' => $this->input->post('nama_divisi'),
-			'fk_id_pendamping' => $this->input->post('fk_id_pendamping'),
-			'fk_id_siswa' => $this->input->post('fk_id_siswa'),
 			'keterangan' => $this->input->post('keterangan'),
 
 		);
-		$this->db->insert('divisi',$set);
+		$this->db->insert('divisi_magang',$set);
 	}
 	public function update($id)
 	{
