@@ -29,15 +29,7 @@ class DivisiModel extends CI_Model {
 	}
 	public function update($id,$gambar)
 	{
-		$set = array(
-			'nama_divisi' => $this->input->post('nama_divisi'),
-			'keterangan' => $this->input->post('keterangan'),
-		);
-		if ($gambar != null) {
-			$set['gambar'] = $gambar;
-		}
-		$this->db->where('id_divisi',$id);
-		$this->db->update('divisi_magang',$set);
+		$this->db->update('divisi_magang', $id, $gambar);
 	}
 	public function delete($id)
 	{

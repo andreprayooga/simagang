@@ -111,6 +111,8 @@ class Divisi extends CI_Controller {
 
 		}
 	}
+
+
 	public function delete($id)
 	{
 		$this->DivisiModel->delete($id);

@@ -49,6 +49,7 @@
                     <option value="<?php echo $value['id_siswa'] ?>"><?php echo $value['nama'] ?></option>
                     <?php endforeach ?>
                   </select>
+                </div>
               </div>
               <div class="form-group">
                 <input class="btn btn-success" type="submit" value="Update">
