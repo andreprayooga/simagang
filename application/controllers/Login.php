@@ -22,7 +22,7 @@ class Login extends CI_Controller {
                 'id_siswa' => $data->id_siswa,
                 'nama' => $data->nama,
                 'username' => $username,
-                'fk_id_level' => $data->fk_id_level
+                // 'fk_id_level' => $data->fk_id_level "tak komen soale fk_id_level di table siswa_magang gak ada"
             );
             $this->session->set_userdata('logged_in_user',$userdata);
             return true;
@@ -38,9 +38,9 @@ class Login extends CI_Controller {
         $this->form_validation->set_rules('username','Username','required|trim|callback_cekDB_admin');
         $this->form_validation->set_rules('password','Password','required');
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('admin/login');
+            $this->load->view('user/login');
         } else {
-            redirect('Admin/Dashboard','refresh');
+            redirect('Admin/Sekolah','refresh');
         }
     }
     public function cekDB_admin($username)

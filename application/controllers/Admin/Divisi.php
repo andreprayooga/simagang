@@ -84,7 +84,7 @@ class Divisi extends CI_Controller {
 			$this->load->view('admin/divisi/template/footer');
 		} else {
 			if ($_FILES['gambar']['name'] != "") {
-				$config['upload_path'] = './uploads/';
+				$config['upload_path'] = './assets/uploads/divisi';
 				$config['allowed_types'] = 'gif|jpg|png';
 				$config['max_size']  = '100';
 				$config['max_width']  = '1024';
@@ -94,7 +94,6 @@ class Divisi extends CI_Controller {
 
 				if ( ! $this->upload->do_upload('gambar')){
 
-					$data['divisi_magang'] = $this->DivisiModel->get_id($id);
 					$data['error'] = $this->upload->display_errors('<p class="text-danger">','</p>');
 					$this->load->view('admin/divisi/template/header');
 					$this->load->view('admin/divisi/update',$data);

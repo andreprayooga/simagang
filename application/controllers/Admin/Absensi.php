@@ -8,6 +8,7 @@ class Absensi extends CI_Controller {
 		$this->load->model('AbsensiModel');
 		$this->load->helper('form');
 
+
 	}
 	public function index()
 	{

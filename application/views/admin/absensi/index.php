@@ -3,43 +3,7 @@
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-2">
-              <div class="row">
-              <div class="card card-profile">
-                <a href="">
-                  <div class="card-header card-header-info">
-                    <h4 class="card-title">Activity Control</h4>
-                  </div>
-                </a>
-                <div class="card-body">
-                  <h6 class="card-category text-gray">Absensi</h6>
-                  <p class="card-description">
-                    Mengontrol kehadiran siswa selama menjalani PKL
-                  </p>
-                  <!-- <?php echo anchor('Barang/create', 'Tambah', array('class' => 'btn btn-info btn-round')); ?> -->
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="card card-profile">
-                <a href="<?= base_url('index.php/Admin/Absensi/insert') ?>">
-                  <div class="card-header card-header-danger">
-                    <h4 class="card-title">Absensi</h4>
-                  </div>
-                </a>
-                <div class="card-body">
-                  <h6 class="card-category text-gray">Kehadiran User</h6>
-                  <p class="card-description">
-                    Menambah Absensi Baru
-                  </p>
-                  <button type="button" class="btn btn-danger btn-round" data-toggle="modal" data-target="#exampleModal">
-                    Tambah
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-10">
+          <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-rose">
                   <div class="row">
@@ -48,8 +12,8 @@
                   <p class="card-category">Untuk mencatat kehadiran siswa setiap hari</p>
                   </div>
                   <div class="col-xs-2">
-                    <a href="#" rel="tooltip" title="Print" class="btn btn-secondary">
-                      <i class="material-icons">print</i>
+                    <a href="<?= base_url('index.php/Admin/Absensi/insert') ?>" rel="tooltip" title="Tambah Data" class="btn btn-secondary">
+                      <i class="material-icons">add_box</i>
                     </a>
                   </div>
                 </div>
@@ -79,7 +43,7 @@
                             <td><?php echo $value->fk_id_siswa ?></td>
 
                             <td>
-                              <a class="badge badge-warning" href="<?php echo site_url("Admin/".$c_name."/update/".$value->id_absensi) ?>"><i class="fa fa-pencil"></i> Edit</a>
+                              <a class="btn btn-sm btn-warning" href="<?php echo site_url("Admin/".$c_name."/update/".$value->id_absensi) ?>"><i class="fa fa-pencil"></i> Edit</a>
                               <a href="<?php echo site_url("Admin/".$c_name."/delete/".$value->id_absensi) ?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-sm btn-danger">
                                 <i class="fa fa-trash"></i> Hapus
                               </a>

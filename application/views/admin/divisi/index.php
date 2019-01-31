@@ -3,25 +3,7 @@
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-3">
-              <div class="row">
-              <div class="card card-profile">
-                <a href="">
-                  <div class="card-header card-header-info">
-                    <h4 class="card-title">Divisi PKL</h4>
-                  </div>
-                </a>
-                <div class="card-body">
-                  <h6 class="card-category text-gray">Pemilihan DIvisi</h6>
-                  <p class="card-description">
-                    Menambahkan divisi dan mengontrol siswa yang masuk ke dalam divisi yang di tentukan
-                  </p>
-                  <!-- <?php echo anchor('Barang/create', 'Tambah', array('class' => 'btn btn-info btn-round')); ?> -->
-                </div>
-              </div>
-            </div>
-        </div>
-          <div class="col-md-9">
+          <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-rose">
                   <div class="row">
