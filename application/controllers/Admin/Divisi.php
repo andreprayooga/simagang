@@ -70,12 +70,11 @@ class Divisi extends CI_Controller {
 			}
 		}
 	}
-	public function update($id)
+public function update($id)
 	{
 		$this->form_validation->set_error_delimiters('<p class="text-danger">','</p');
-		$this->form_validation->set_rules('nama_instansi','nama_instansi',"required|trim");
-		$this->form_validation->set_rules('keterangan','keterangan',"required|trim");
-		
+		$this->form_validation->set_rules('nama_divisi','nama_divisi',"required|trim");
+		$this->form_validation->set_rules('keterangan','Keterangan',"required");
 
 		if ($this->form_validation->run() == FALSE) {
 			$data['divisi_magang'] = $this->DivisiModel->get_id($id);
@@ -83,35 +82,35 @@ class Divisi extends CI_Controller {
 			$this->load->view('admin/divisi/update',$data);
 			$this->load->view('admin/divisi/template/footer');
 		} else {
-			if ($_FILES['gambar']['name'] != "") {
-				$config['upload_path'] = './assets/uploads/divisi';
-				$config['allowed_types'] = 'gif|jpg|png';
-				$config['max_size']  = '100';
-				$config['max_width']  = '1024';
-				$config['max_height']  = '768';
+			$config['upload_path'] = "./assets/uploads/divisi/";
+			$config['allowed_types'] = "gif|jpg|png";
+			$config['max_width'] = '10240';
+			$config['max_height'] = '7680';
+			$config['max_size'] = "2000";
 
-				$this->load->library('upload', $config);
+			$this->load->library('upload',$config);
 
-				if ( ! $this->upload->do_upload('gambar')){
-
-					$data['error'] = $this->upload->display_errors('<p class="text-danger">','</p>');
-					$this->load->view('admin/divisi/template/header');
-					$this->load->view('admin/divisi/update',$data);
-					$this->load->view('admin/divisi/template/footer');
-				}
-				else{
-					$up = array('upload_data' => $this->upload->data());
-					$this->DivisiModel->update($id,$up['upload_data']['file_name']);
-					redirect('Admin/Divisi','refresh');
-				}
+			if (!$this->upload->do_upload('gambar')) {
+				$data['error'] = $this->upload->display_errors();
+				$this->load->view('admin/divisi/index',$data);
 			}else{
-				$this->DivisiModel->update($id,null);
-				redirect('Admin/Divisi','refresh');
-			}
+				$upload_data = $this->upload->data();
+				#get data
+				$set = array(
+					'nama_divisi' => $this->input->post('nama_divisi'),
+					'gambar' => $upload_data['file_name'],
+					'keterangan' => $this->input->post('keterangan'),
+				);
 
+				$this->db->where('id_divisi',$id);
+				$this->db->update('divisi_magang',$set);
+
+			redirect('Admin/Divisi','refresh');
 		}
 	}
 
+
+}
 
 	public function delete($id)
 	{

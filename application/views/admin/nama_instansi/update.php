@@ -21,11 +21,11 @@
                 <label class="bmd-label-floating">No. HP</label>
                 <input type="text" id="input-no_hp" name="no_hp" class="form-control" value="<?php echo $nama_instansi->no_hp ?>">
               </div>
-              <img src="<?php echo base_url(); ?>/assets/uploads/siswa<?php echo $data[0]['logo_instansi'] ?>" alt="File Tidak Ada" height="100px" width="100px">
-              <div class="form-group">
-                <label for="logo_instansi">Gambar</label>
-                <input type = "file" name = "gambar" size = "20" />
-              </div>
+              <img src="<?php echo base_url('./assets/uploads/nama_instansi/'.$nama_instansi->gambar.'');?>" height="150px" width="150px">
+                 <label class="file">
+                    <input type="file" class="form-control-file" name="gambar">
+                    <span class="file-custom"></span>
+                  </label>>
               <div class="row">
                 <div class="col-sm-3">
                   <div class="form-group">

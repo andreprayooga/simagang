@@ -28,7 +28,7 @@ class Posisi extends CI_Controller {
 			$this->load->view('admin/posisi/insert');
 			$this->load->view('admin/posisi/template/footer');
 		} else {
-			$config['upload_path'] = "./assets/uploads/siswa/";
+			$config['upload_path'] = "./assets/uploads/posisi/";
 			$config['allowed_types'] = "gif|jpg|png";
 			$config['max_width'] = '10240';
 			$config['max_height'] = '7680';

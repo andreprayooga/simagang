@@ -3,25 +3,7 @@
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-3">
-              <div class="row">
-              <div class="card card-profile">
-                <a href="">
-                  <div class="card-header card-header-info">
-                    <h4 class="card-title">List Posisi Magang</h4>
-                  </div>
-                </a>
-
-                <div class="card-body">
-                  <h6 class="card-category text-gray">Penempatan Posisi Siswa</h6>
-                  <p class="card-description">
-                    Diposisi manakah yang akan di ambil siswa, yang berguna untuk melatih bakat yang dimilikinya
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-9">
+          <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-rose">
                   <div class="row">

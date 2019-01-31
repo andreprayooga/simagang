@@ -26,20 +26,16 @@ class NamaInstansiModel extends CI_Model {
 	{
 		  return $this->db->insert('nama_instansi', $data);
 	}
-	public function update($id,$foto)
-	{
+	public function update($id) {
 		$set = array(
 			'nama_instansi' => $this->input->post('nama_instansi'),
 			'alamat' => $this->input->post('alamat'),
 			'no_hp' => $this->input->post('no_hp'),
 			'fk_id_siswa' => $this->input->post('fk_id_siswa'),
 		);
-		if ($foto != null) {
-			$set['logo_instansi'] = $foto;
-		}
-		$this->db->where('id_instansi',$id);
-		$this->db->update('nama_instansi',$set);
-	}
+		$this->db->where('id_divisi',$id);
+		$this->db->update('divisi_magang',$set);
+  }	
 	public function delete($id)
 	{
 		$this->db->where('id_instansi',$id);

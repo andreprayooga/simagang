@@ -26,31 +26,30 @@ class SiswaModel extends CI_Model {
 {
 return $this->db->insert('siswa_magang', $data);
 }
-	public function update($id,$foto)
-	{
+public function update($id) {
 		$set = array(
-			'nim_nisn' => $this->input->post('nim_nisn'),
-			'nama' => $this->input->post('nama'),
-			'email' => $this->input->post('email'),
-			'jurusan' => $this->input->post('jurusan'),
-			'nama_instansi' => $this->input->post('nnama_instansi'),
-			'semester' => $this->input->post('semester'),
-			'alamat' => $this->input->post('alamat'),
-			'no_hp' => $this->input->post('no_hp'),
-			'provinsi' => $this->input->post('provinsi'),
-			'kota' => $this->input->post('kota'),
-			'tempat_lahir' => $this->input->post('tempat_lahir'),
-			'tanggal_lahir' => $this->input->post('tanggal_lahir'),
-			'username' => $this->input->post('username'),
-			'password' => $this->input->post('password'),
-			'jenis_kelamin' => $this->input->post('jenis_kelamin'),
+					'nim_nisn' => $this->input->post('nim_nisn'),
+					'nama' => $this->input->post('nama'),
+					'email' => $this->input->post('email'),
+					'jurusan' => $this->input->post('jurusan'),
+					'nama_instansi' => $this->input->post('nama_instansi'),
+					'semester' => $this->input->post('semester'),
+					'alamat' => $this->input->post('alamat'),
+					'no_hp' => $this->input->post('no_hp'),
+					'provinsi' => $this->input->post('provinsi'),
+					'kota' => $this->input->post('kota'),
+					'tempat_lahir' => $this->input->post('tempat_lahir'),
+					'tanggal_lahir' => $this->input->post('tanggal_lahir'),
+					'username' => $this->input->post('username'),
+					'password' => $this->input->post('password'),
+					'jenis_kelamin' => $this->input->post('jenis_kelamin'),
+					'foto' => $upload_data['file_name'],
+					'fk_id_pendamping' => $this->input->post('fk_id_pendamping'),
+					'fk_posisi_magang' => $this->input->post('fk_posisi_magang'),
 		);
-		if ($foto != null) {
-			$set['foto'] = $foto;
-		}
 		$this->db->where('id_siswa',$id);
 		$this->db->update('siswa_magang',$set);
-	}
+  }	
 	public function delete($id)
 	{
 		$this->db->where('id_siswa',$id);

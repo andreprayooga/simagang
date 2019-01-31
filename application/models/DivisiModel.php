@@ -27,10 +27,14 @@ class DivisiModel extends CI_Model {
 		
 		$this->db->insert('divisi_magang',$data);
 	}
-	public function update($id,$gambar)
-	{
-		$this->db->update('divisi_magang', $id, $gambar);
-	}
+public function update($id) {
+		$set = array(
+			'nama_divisi' => $this->input->post('nama_divisi'),
+			'keterangan' => $this->input->post('keterangan'),
+		);
+		$this->db->where('id_divisi',$id);
+		$this->db->update('divisi_magang',$set);
+  }	
 	public function delete($id)
 	{
 		$this->db->where('id_divisi',$id);
@@ -39,4 +43,10 @@ class DivisiModel extends CI_Model {
 			$this->session->set_flashdata('error_message',"Gagal Menghapus Terdapat Foreign Key");
 		}
 	}
+
+	  public function getOne($id)
+  {
+    $query = $this->db->query("select * from divisi_magang where id_divisi='$id'");
+    return $query->result_array();
+  }
 }
