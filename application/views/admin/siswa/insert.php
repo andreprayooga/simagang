@@ -71,9 +71,9 @@
                     <label for="provinsi">Provinsi</label>
                     <select class="custom-select" name="provinsi"class="form-control" id="provinsi">
                       <?php foreach ($provinsi as $prov): ?>
-                        <option <?php echo $provinsi_selected == $prov->id_provinsi ? 'selected="selected"' : '' ?>
-                          value="<?php echo $prov->id_provinsi ?>"><?php echo $prov->nama_provinsi ?>
-                        </option>
+                      <option <?php echo $provinsi_selected == $prov->id_provinsi ? 'selected="selected"' : '' ?>
+                        value="<?php echo $prov->id_provinsi ?>"><?php echo $prov->nama_provinsi ?>
+                      </option>
                       <?php endforeach; ?>
                     </select>
                   </div>
@@ -83,9 +83,9 @@
                     <label for="kota">Kabupaten / Kota</label>
                     <select class="custom-select" name="kota" class="form-control" id="kota">
                       <?php foreach ($kota as $kot): ?>
-                        <option <?php echo $kota_selected == $kot->fk_id_provinsi ? 'selected="selected"' : '' ?>class="<?php echo $kot->fk_id_provinsi ?>"
-                          value="<?php echo $kot->id_kota ?>"><?php echo $kot->nama_kota ?>
-                        </option>
+                      <option <?php echo $kota_selected == $kot->fk_id_provinsi ? 'selected="selected"' : '' ?>class="<?php echo $kot->fk_id_provinsi ?>"
+                        value="<?php echo $kot->id_kota ?>"><?php echo $kot->nama_kota ?>
+                      </option>
                       <?php endforeach; ?>
                     </select>
                   </div>
@@ -101,7 +101,7 @@
                       <div class="col-md-9">
                         <select class="custom-select" name="tempat_lahir"class="form-control" id="tempat_lahir">
                           <?php foreach ($this->db->get('kota')->result_array() as $key => $value): ?>
-                            <option value="<?php echo $value['id_kota'] ?>"><?php echo $value['nama_kota'] ?></option>
+                          <option value="<?php echo $value['id_kota'] ?>"><?php echo $value['nama_kota'] ?></option>
                           <?php endforeach ?>
                         </select>
                       </div>

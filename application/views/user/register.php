@@ -67,14 +67,6 @@
                             </div>
                             <div class="form-group">
                               <div class="form-input">
-                                  <label for="provinsi" class="required">Provinsi</label>
-                                  <input type="text" name="provinsi" id="provinsi" />
-                              </div>
-                              <div class="form-input">
-                                  <label for="kota" class="required">Kota</label>
-                                  <input type="text" name="kota" id="kota" />
-                              </div>
-                              <div class="form-input">
                                   <label for="tempat_lahir" class="required">Tempat Lahir</label>
                                   <input type="text" name="tempat_lahir" id="tempat_lahir" />
                               </div>

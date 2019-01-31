@@ -19,12 +19,14 @@ class Login extends CI_Controller {
         if ($cekDB->num_rows() == 1) {
             $data = $cekDB->result()[0];
             $userdata = array(
-                'id' => $data->id,
+                'id_siswa' => $data->id_siswa,
                 'nama' => $data->nama,
-                'username' => $username
+                'username' => $username,
+                'fk_id_level' => $data->fk_id_level
             );
             $this->session->set_userdata('logged_in_user',$userdata);
             return true;
+            redirect('/Admin/Sekolah','refresh');
         }else{
             $this->form_validation->set_message('cekDB','Username dan password tidak valid');
             return false;
@@ -48,10 +50,10 @@ class Login extends CI_Controller {
         if ($cekDB_admin->num_rows() == 1) {
             $data = $cekDB_admin->result()[0];
             $userdata = array(
-                'id' => $data->id,
+                'id_administrator' => $data->id_administrator,
                 'nama' => $data->nama,
                 'username' => $username,
-                'fk_level' => $data->fk_level
+                'fk_id_level' => $data->fk_id_level
             );
             $this->session->set_userdata('logged_in',$userdata);
             return true;

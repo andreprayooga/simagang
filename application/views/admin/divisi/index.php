@@ -42,8 +42,7 @@
                     <thead class=" text-rose">
                       <th>ID.</th>
                       <th>Nama Divisi</th>
-                      <th>ID Pendamping</th>
-                      <th>ID Siswa</th>
+                      <th>Gambar</th>
                       <th>Keterangan</th>
                       <th></th>
                     </thead>
@@ -52,8 +51,7 @@
                         <tr>
                           <td><?php echo ++$key; ?></td>
                           <td><?php echo $value->nama_divisi ?></td>
-                          <td><?php echo $value->fk_id_pendamping ?></td>
-                          <td><?php echo $value->fk_id_siswa ?></td>
+                          <td><?php echo $value->gambar?></td>
                           <td><?php echo $value->keterangan ?></td>
                           <td>
                             <a class="btn btn-sm btn-success" href="#" rel="tooltip" title="Detail"><i class="material-icons">zoom_out_map</i></a>

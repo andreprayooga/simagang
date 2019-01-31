@@ -36,8 +36,6 @@ class Register extends CI_Controller {
 					'semester' => $this->input->post('semester'),
 					'alamat' => $this->input->post('alamat'),
 					'no_hp' => $this->input->post('no_hp'),
-					'provinsi' => $this->input->post('provinsi'),
-					'kota' => $this->input->post('kota'),
 					'tempat_lahir' => $this->input->post('tempat_lahir'),
 					'tanggal_lahir' => $this->input->post('tanggal_lahir'),
 					'username' => $this->input->post('username'),

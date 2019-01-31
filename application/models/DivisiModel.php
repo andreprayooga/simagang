@@ -3,13 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class DivisiModel extends CI_Model {
 	public function get()
 	{
-		$this->db->select("divisi.*");
+		$this->db->select("divisi_magang.*");
 		$this->db->order_by('nama_divisi','desc');
-		return $this->db->get('divisi')->result();
+		return $this->db->get('divisi_magang')->result();
 	}
 	public function get_id($id)
 	{
-		return $this->db->where('id_divisi',$id)->get('divisi')->row(0);
+		return $this->db->where('id_divisi',$id)->get('divisi_magang')->row(0);
 	}
 	public function auto_code()
 	{
@@ -22,32 +22,27 @@ class DivisiModel extends CI_Model {
 		$new_id = substr("0000".$last_id+1, -4);
 		return "LK".$new_id;
 	}
-	public function insert()
+	public function insert($data)
 	{
-		$set = array(
-			'nama_divisi' => $this->input->post('nama_divisi'),
-			'fk_id_pendamping' => $this->input->post('fk_id_pendamping'),
-			'fk_id_siswa' => $this->input->post('fk_id_siswa'),
-			'keterangan' => $this->input->post('keterangan'),
-
-		);
-		$this->db->insert('divisi',$set);
+		
+		$this->db->insert('divisi_magang',$data);
 	}
-	public function update($id)
+	public function update($id,$gambar)
 	{
 		$set = array(
 			'nama_divisi' => $this->input->post('nama_divisi'),
-			'fk_id_pendamping' => $this->input->post('fk_id_pendamping'),
-			'fk_id_siswa' => $this->input->post('fk_id_siswa'),
 			'keterangan' => $this->input->post('keterangan'),
 		);
+		if ($gambar != null) {
+			$set['gambar'] = $gambar;
+		}
 		$this->db->where('id_divisi',$id);
-		$this->db->update('divisi',$set);
+		$this->db->update('divisi_magang',$set);
 	}
 	public function delete($id)
 	{
 		$this->db->where('id_divisi',$id);
-		$delete = $this->db->delete('divisi');
+		$delete = $this->db->delete('divisi_magang');
 		if ($this->db->error()['code'] == 1451){
 			$this->session->set_flashdata('error_message',"Gagal Menghapus Terdapat Foreign Key");
 		}

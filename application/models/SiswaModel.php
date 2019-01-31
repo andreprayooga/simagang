@@ -22,11 +22,10 @@ class SiswaModel extends CI_Model {
 		$new_id = substr("0000".$last_id+1, -4);
 		return "LK".$new_id;
 	}
-
 	public function insert($data)
-  {
-    return $this->db->insert('siswa_magang', $data);
-  }
+{
+return $this->db->insert('siswa_magang', $data);
+}
 	public function update($id,$foto)
 	{
 		$set = array(
@@ -42,9 +41,6 @@ class SiswaModel extends CI_Model {
 			'kota' => $this->input->post('kota'),
 			'tempat_lahir' => $this->input->post('tempat_lahir'),
 			'tanggal_lahir' => $this->input->post('tanggal_lahir'),
-			'tanggal' => $this->input->post('tanggal'),
-			'bulan' => $this->input->post('bulan'),
-			'tahun' => $this->input->post('tahun'),
 			'username' => $this->input->post('username'),
 			'password' => $this->input->post('password'),
 			'jenis_kelamin' => $this->input->post('jenis_kelamin'),
@@ -60,13 +56,11 @@ class SiswaModel extends CI_Model {
 		$this->db->where('id_siswa',$id);
 		$this->db->delete('siswa_magang');
 	}
-
 	public function get_provinsi()
 {
 		$this->db->order_by('nama_provinsi', 'asc');
 		return $this->db->get('provinsi')->result();
 }
-
 public function get_kota()
 {
 		// kita joinkan tabel kota dengan provinsi
@@ -74,4 +68,17 @@ public function get_kota()
 		$this->db->join('provinsi', 'kota.fk_id_provinsi = provinsi.id_provinsi');
 		return $this->db->get('kota')->result();
 }
+ public function login($username, $password){
+       // Validasi
+       $this->db->where('username', $username);
+       $this->db->where('password', $password);
+       $result = $this->db->get('siswa_magang');
+       if($result->num_rows() == 1){
+           $data['id_siswa'] = $result->row(0)->id_siswa;
+           $data['fk_id_level'] = $result->row(0)->fk_id_level;
+           return $data;
+       } else {
+           return false;
+       }
+   }	
 }

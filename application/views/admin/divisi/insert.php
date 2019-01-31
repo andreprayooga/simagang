@@ -24,26 +24,14 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-sm-3">
+              <div class="col-sm-2">
                   <div class="form-group">
-                    <label for="nama_divisi">Pilih Pendamping</label>
-                    <select class="custom-select" name="fk_id_pendamping"class="form-control">
-                      <?php foreach ($this->db->get('pendamping_magang')->result_array() as $key => $value): ?>
-                        <option value="<?php echo $value['id_pendamping'] ?>"><?php echo $value['nama'] ?></option>
-                      <?php endforeach ?>
-                    </select>
+                    <label for="gambar">Gambar</label>
                   </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="form-group">
-                    <label for="kondisi_model">Pilih Siswa</label>
-                    <select class="custom-select" name="fk_id_siswa" class="form-control">
-                      <?php foreach ($this->db->get('siswa_magang')->result_array() as $key => $value): ?>
-                        <option value="<?php echo $value['id_siswa'] ?>"><?php echo $value['nama'] ?></option>
-                      <?php endforeach ?>
-                    </select>
-                  </div>
+                  <label class="file">
+                    <input type="file" class="form-control-file" name="gambar">
+                    <span class="file-custom"></span>
+                  </label>
                 </div>
               </div>
               <div class="form-group">
