@@ -92,7 +92,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="<?= base_url('index.php/Admin/') ?>">
+            <a class="nav-link" href="<?= base_url('index.php/Login/logout') ?>">
               <i class="material-icons">assignment_return</i>
               <p>Logout</p>
             </a>
