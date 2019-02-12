@@ -107,7 +107,7 @@
                               </div>
                               <div class="form-input">
                                   <label for="aa" class="required">Nama Posisi</label>
-                                  <input type="text" id="aa" value="<?php echo $posisi->nama_posisi ?>"/>
+                                  <input type="text" id="aa" value="<?php echo $posisi->nama_posisi ?>"/ readonly>
                               </div>
                             </div>
                         </div>

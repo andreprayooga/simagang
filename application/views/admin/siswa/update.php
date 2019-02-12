@@ -68,32 +68,6 @@
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label for="provinsi">Provinsi</label>
-                    <select class="custom-select" name="provinsi"class="form-control" id="provinsi">
-                      <?php foreach ($provinsi as $prov): ?>
-                      <option <?php echo $provinsi_selected == $prov->id_provinsi ? 'selected="selected"' : '' ?>
-                        value="<?php echo $prov->id_provinsi ?>"><?php echo $prov->nama_provinsi ?>
-                      </option>
-                      <?php endforeach; ?>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label for="kota">Kabupaten / Kota</label>
-                    <select class="custom-select" name="kota" class="form-control" id="kota">
-                      <?php foreach ($kota as $kot): ?>
-                      <option <?php echo $kota_selected == $kot->fk_id_provinsi ? 'selected="selected"' : '' ?>class="<?php echo $kot->fk_id_provinsi ?>"
-                        value="<?php echo $kot->id_kota ?>"><?php echo $kot->nama_kota ?>
-                      </option>
-                      <?php endforeach; ?>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="form-group">
                     <div class="row">
                       <div class="col-md-3">
                         <label for="tempat_lahir" class="bmd-label-floating">Tempat Lahir</label>
@@ -111,7 +85,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="tanggal_lahir">Tanggal Lahir</label>
-                    <input type="date" name=tanggal_lahir class="form-control" autofocus required>
+                    <input type="date" name=tanggal_lahir class="form-control"  value="<?php echo $siswa_magang->tanggal_lahir ?>" autofocus required>
                   </div>
                 </div>
               </div>
@@ -137,20 +111,35 @@
                       <option selected value="">Pilih Jenis Kelamin</option>
                       <option>Laki - Laki</option>
                       <option>Perempuan</option>
-                      <?php echo $siswa_magang->jenis_kelamin ?>"
                     </select>
                   </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                   <div class="form-group">
-                    <label for="foto">Logo Instansi</label>
+                    <label for="nama_divisi">Pilih Pendamping</label>
+                    <select class="custom-select" name="fk_id_pendamping"class="form-control">
+                      <?php foreach ($this->db->get('pendamping_magang')->result_array() as $key => $value): ?>
+                      <option value="<?php echo $value['id_pendamping'] ?>"><?php echo $value['nama'] ?></option>
+                      <?php endforeach ?>
+                    </select>
                   </div>
-                  <label class="file">
-                    <input type="file" class="form-control-file" name="foto">
-                    <span class="file-custom"></span>
-                  </label>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="nama_divisi">Pilih Divisi</label>
+                    <select class="custom-select" name="fk_posisi_magang"class="form-control">
+                      <?php foreach ($this->db->get('posisi_magang')->result_array() as $key => $value): ?>
+                      <option value="<?php echo $value['id_posisi'] ?>"><?php echo $value['nama_posisi'] ?></option>
+                      <?php endforeach ?>
+                    </select>
+                  </div>
                 </div>
               </div>
+              <img src="<?php echo base_url('./assets/uploads/siswa/'.$siswa_magang->foto.'');?>" height="200px" width="200px">
+              <label class="file">
+                <input type="file" class="form-control-file" name="foto">
+                <span class="file-custom"></span>
+              </label>
               <div class="form-group">
                 <input class="btn btn-info" type="submit" value="Simpan">
               </div>

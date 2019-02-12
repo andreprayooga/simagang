@@ -29,7 +29,6 @@
                         <th>Aktivitas</th>
                         <th>Keterangan</th>
                         <th>Siswa</th>
-                        <th></th>
                       </thead>
                       <tbody>
                         <?php foreach ($data as $key => $value): ?>
@@ -40,14 +39,7 @@
                             <td><?php echo $value->pulang ?></td>
                             <td><?php echo $value->aktivitas ?></td>
                             <td><?php echo $value->keterangan ?></td>
-                            <td><?php echo $value->nama_siswa ?></td>
-
-                            <td>
-                              <a class="btn btn-sm btn-warning" href="<?php echo site_url("Admin/".$c_name."/update/".$value->id_absensi) ?>" rel="tooltip" title="Edit"><i class="material-icons">edit</i></a>
-                              <a href="<?php echo site_url("Admin/".$c_name."/delete/".$value->id_absensi) ?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-sm btn-danger" rel="tooltip" title="Delete">
-                                <i class="material-icons">delete</i>
-                              </a>
-                            </td>
+                            <td><?php echo $value->fk_id_siswa ?></td>
                           </tr>
                           <?php endforeach ?>
                       </tbody>

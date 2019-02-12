@@ -4,8 +4,8 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header card-header-success">
-            <h4 class="card-title ">Edit Komentar</h4>
-            <p class="card-category">Komentar dan Masukan dari User</p>
+            <h4 class="card-title ">Edit Administrator</h4>
+            <p class="card-category">Edit Data Administrator</p>
           </div>
           <div class="card-body">
             <form action="" method="post" enctype="multipart/form-data">

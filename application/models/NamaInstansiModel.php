@@ -33,8 +33,8 @@ class NamaInstansiModel extends CI_Model {
 			'no_hp' => $this->input->post('no_hp'),
 			'fk_id_siswa' => $this->input->post('fk_id_siswa'),
 		);
-		$this->db->where('id_divisi',$id);
-		$this->db->update('divisi_magang',$set);
+		$this->db->where('id_instansi',$id);
+		$this->db->update('nama_instansi',$set);
   }	
 	public function delete($id)
 	{

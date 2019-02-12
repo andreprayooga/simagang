@@ -11,7 +11,7 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-category text-gray">SUPER ADMIN</h6>
-                    <h4 class="card-title">BjongNgopi</h4>
+                    <h4 class="card-title"><?= $this->session->userdata('logged_in')['nama'] ?></h4>
                   <p class="card-description">
                     Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
                   </p>
@@ -40,8 +40,8 @@
                 <div class="card-header card-header-rose">
                   <div class="row">
                     <div class="col-md-10">
-                  <h4 class="card-title ">Simple Table</h4>
-                  <p class="card-category"> Here is a subtitle for this table</p>
+                  <h4 class="card-title ">Data Administrator</h4>
+                  <p class="card-category">List Administrator</p>
                   </div>
                   <div class="col-xs-2">
                     <a href="#" rel="tooltip" title="Tambah Data" class="btn btn-secondary">

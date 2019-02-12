@@ -30,8 +30,6 @@ class SiswaMagang extends CI_Controller {
 		$this->form_validation->set_rules('semester','semester',"required");
 		$this->form_validation->set_rules('alamat','alamat',"required");
 		$this->form_validation->set_rules('no_hp','no_hp',"required");
-		$this->form_validation->set_rules('provinsi','provinsi',"required");
-		$this->form_validation->set_rules('kota','kota',"required");
 		$this->form_validation->set_rules('tempat_lahir','tempat_lahir',"required");
 		$this->form_validation->set_rules('tanggal_lahir','tanggal_lahir',"required");
 		$this->form_validation->set_rules('username','username',"required");
@@ -75,9 +73,6 @@ class SiswaMagang extends CI_Controller {
 				'nama_instansi' => $this->input->post('nama_instansi'),
 				'semester' => $this->input->post('semester'),
 				'alamat' => $this->input->post('alamat'),
-				'provinsi' => $this->input->post('provinsi'),
-				'kota' => $this->input->post('kota'),
-				// 'kabupaten' => $this->input->post('kabupaten'),
 				'tempat_lahir' => $this->input->post('tempat_lahir'),
 				'tanggal_lahir' => $this->input->post('tanggal_lahir'),
 				'foto' => $post_image,
@@ -122,9 +117,11 @@ class SiswaMagang extends CI_Controller {
 			$config['max_height'] = '7680';
 			$config['max_size'] = "2000";
 			$this->load->library('upload',$config);
-			if (!$this->upload->do_upload('gambar')) {
+			if (!$this->upload->do_upload('foto')) {
 				$data['error'] = $this->upload->display_errors();
+				$this->load->view('admin/siswa/template/header');
 				$this->load->view('admin/siswa/index',$data);
+				$this->load->view('admin/siswa/template/footer');
 			}else{
 				$upload_data = $this->upload->data();
 				#get data
@@ -137,8 +134,6 @@ class SiswaMagang extends CI_Controller {
 					'semester' => $this->input->post('semester'),
 					'alamat' => $this->input->post('alamat'),
 					'no_hp' => $this->input->post('no_hp'),
-					'provinsi' => $this->input->post('provinsi'),
-					'kota' => $this->input->post('kota'),
 					'tempat_lahir' => $this->input->post('tempat_lahir'),
 					'tanggal_lahir' => $this->input->post('tanggal_lahir'),
 					'username' => $this->input->post('username'),
@@ -148,16 +143,6 @@ class SiswaMagang extends CI_Controller {
 					'fk_id_pendamping' => $this->input->post('fk_id_pendamping'),
 					'fk_posisi_magang' => $this->input->post('fk_posisi_magang'),
 				);
-						$post_data = array(
-			'provinsi' => $this->SiswaModel->get_provinsi(),
-			'kota' => $this->SiswaModel->get_kota(),
-			'provinsi_selected' => '',
-			'kota_selected' => '',
-		);
-							if( empty($data['upload_error']) ) {
-				$this->SiswaModel->insert($post_data);
-				redirect('Admin/SiswaMagang','refresh');
-			}
 				$this->db->where('id_siswa',$id);
 				$this->db->update('siswa_magang',$set);
 			redirect('Admin/SiswaMagang','refresh');

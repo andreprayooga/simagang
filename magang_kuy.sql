@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 24 Jan 2019 pada 04.23
+-- Generation Time: 01 Feb 2019 pada 11.20
 -- Versi Server: 10.1.26-MariaDB
--- PHP Version: 7.1.8
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -30,13 +30,22 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `absensi` (
   `id_absensi` int(11) NOT NULL,
-  `tanggal` datetime NOT NULL,
+  `tanggal` date NOT NULL,
   `datang` time NOT NULL,
   `pulang` time NOT NULL,
   `aktivitas` text NOT NULL,
   `keterangan` text NOT NULL,
   `fk_id_siswa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `absensi`
+--
+
+INSERT INTO `absensi` (`id_absensi`, `tanggal`, `datang`, `pulang`, `aktivitas`, `keterangan`, `fk_id_siswa`) VALUES
+(1, '2019-01-03', '10:15:00', '10:15:00', 'Todir', 'Hadir', 6),
+(2, '2019-01-12', '07:00:00', '07:00:00', 'Tidur', 'Izin', 13),
+(3, '2019-02-01', '07:00:00', '19:00:00', 'mengerjakan login', 'Hadir', 5);
 
 -- --------------------------------------------------------
 
@@ -58,8 +67,8 @@ CREATE TABLE `administrator` (
 --
 
 INSERT INTO `administrator` (`id_administrator`, `nama`, `email`, `username`, `password`, `fk_id_level`) VALUES
-(1, 'Rembrandt', 'ezpz@gmail.com', 'wowo', 'zzz', 1),
-(2, 'Vermin', 'vzz@gmail.com', 'gembel', '12345', 1);
+(1, 'Rembrandt', 'ezpz@gmail.com', 'CV', 'zzz', 1),
+(2, 'Vermin', 'vzz@gmail.com', 'bowo', '12345', 1);
 
 -- --------------------------------------------------------
 
@@ -93,16 +102,25 @@ INSERT INTO `bulan` (`id_bulan`, `nama_bulan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `divisi`
+-- Struktur dari tabel `divisi_magang`
 --
 
-CREATE TABLE `divisi` (
+CREATE TABLE `divisi_magang` (
   `id_divisi` int(11) NOT NULL,
   `nama_divisi` varchar(45) NOT NULL,
-  `fk_id_pendamping` int(11) NOT NULL,
-  `fk_id_siswa` int(11) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
   `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `divisi_magang`
+--
+
+INSERT INTO `divisi_magang` (`id_divisi`, `nama_divisi`, `gambar`, `keterangan`) VALUES
+(1, 'Business Dev Department', 'dev.jpg', 'Createive Hub Operating\r\nIT Sector Community Empowering\r\nPublic Relation & Marketing\r\nCo-Working Station\r\nIT Vokasi Programs'),
+(2, 'Services Department', '5_101.PNG', 'Care CenterAccount RepresentativeClient SupportProject CounselorAdministrative Support'),
+(3, 'Production Department', 'service.jpg', 'Web HTML Responsive\r\nData Mining & Processing\r\nBackbone IT Construction\r\nMobile Apps Native\r\nDigital Security Services'),
+(4, 'R&D Department', 'html.jpg', 'IT People Development\r\nBlockchain Technology\r\nOptimation Digital Project\r\nNew Product Development\r\nDigital Project Assessment');
 
 -- --------------------------------------------------------
 
@@ -137,7 +155,7 @@ CREATE TABLE `komentar` (
 --
 
 INSERT INTO `komentar` (`id_komentar`, `nama`, `email`, `keterangan`) VALUES
-(1, 'zuzu', 'gunturtegar@gmail.com', 'kadal penyet');
+(1, 'zuzu', 'gunturtegar@gmail.com', 'ww');
 
 -- --------------------------------------------------------
 
@@ -659,17 +677,37 @@ INSERT INTO `kota` (`id_kota`, `fk_id_provinsi`, `nama_kota`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `login`
+--
+
+CREATE TABLE `login` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `nama_instansi`
 --
 
 CREATE TABLE `nama_instansi` (
   `id_instansi` int(11) NOT NULL,
-  `nama_sekolah` varchar(55) NOT NULL,
+  `nama_instansi` varchar(55) NOT NULL,
   `alamat` varchar(100) NOT NULL,
   `no_hp` varchar(45) NOT NULL,
-  `logo_instansi` varchar(100) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
   `fk_id_siswa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `nama_instansi`
+--
+
+INSERT INTO `nama_instansi` (`id_instansi`, `nama_instansi`, `alamat`, `no_hp`, `gambar`, `fk_id_siswa`) VALUES
+(1, 'POLITEKNIK NEGERI MALANG', 'Jl. Soekarno Hatta No. 9 Malang', '(0341) 404424, 404425', '6_4.PNG', 5);
 
 -- --------------------------------------------------------
 
@@ -692,7 +730,9 @@ CREATE TABLE `pendamping_magang` (
 --
 
 INSERT INTO `pendamping_magang` (`id_pendamping`, `nama`, `email`, `no_hp`, `username`, `password`, `fk_id_level`) VALUES
-(1, 'Guntur TS', 'gunturtegar@gmail.com', '087345676098', 'zzz', 'wowo', 3);
+(1, 'Guntur TS', 'gunturtegar@gmail.com', '087345676098', 'zzz', 'wowo', 3),
+(3, 'asa', 'asas@gmail.com', '121212', 'aaasasasa', 'asasasa', 3),
+(4, 'rtthtehrthrt', 'rehr@gmail.com', '32413413', 'asdd', 'jihan', 1);
 
 -- --------------------------------------------------------
 
@@ -706,7 +746,6 @@ CREATE TABLE `penilaian` (
   `nilai_huruf` varchar(45) NOT NULL,
   `keterangan` text NOT NULL,
   `fk
-
 Andre Prayogo, [21.01.19 21:12]
 _id_siswa` int(11) NOT NULL,
   `fk_id_pendamping` int(11) NOT NULL
@@ -722,8 +761,21 @@ CREATE TABLE `posisi_magang` (
   `id_posisi` int(11) NOT NULL,
   `nama_posisi` varchar(45) NOT NULL,
   `fk_id_divisi` int(11) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
   `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `posisi_magang`
+--
+
+INSERT INTO `posisi_magang` (`id_posisi`, `nama_posisi`, `fk_id_divisi`, `gambar`, `keterangan`) VALUES
+(12, '15', 3, 'polinema.jpg', 'DESCRIPTION- Menjaga dan meningkatkan situs web- Optimalkan aplikasi untuk kecepatan maksimum- Desain fitur berbasis seluler- Berkolaborasi dengan pengembang back-end dan desainer web untuk meningkatkan kegunaan- Dapatkan umpan balik dari, dan membangun solusi untuk, pengguna dan pelanggan- Menulis dokumen persyaratan fungsional dan panduan- Buat maket dan prototipe berkualitas- Bantu pengembang back-end dengan pengkodean dan pemecahan masalah- Pastikan standar grafis berkualitas tinggi dan konsistensi mereka- Tetap up-to-date tentang teknologi yang muncul'),
+(13, 'IT DATA ANALYST', 1, 'photo_2019-01-30_14-12-59.jpg', 'DESCRIPTION\r\n\r\n- Memproses permintaan data dari user setelah mendapat persetujuan dari Direksi\r\n- Mengecek apakah cashflow report rutin harian/ mingguan/ bulanan sudah jalan\r\n- Sesuai schedulenya atau belum, Membantu user memperbaiki cashflow report bila\r\n- Ada data yang salah/ tidak sesuai.'),
+(14, 'MULTIMEDIA - GRAPHIC DESIGN', 3, 'photo_2019-01-30_14-12-56.jpg', 'Bertanggung jawab dalam merancang, melakukan riset dan mendesain penampilan produk digital untuk Aplikasi dan Website.\r\n\r\n- Membuat dan menyediakan Flitts dengan konten yang dirancang sendiri.\r\n- Merancang antarmuka pengguna untuk situs web dan aplikasi baru dan yang dirancang ulang\r\n- Buat wireframes, maket, dan prototipe situs Web responsive (menggunakan zeplin dan sejenisnya) *akan diajarkan cara penggunaan zeplin\r\n- Bekerja pada proyek dengan cakupan beragam dengan kemampuan yang tajam untuk beralih antara tugas kreatif\r\n- Berfokus pada estetika material, ide, konseptualisasi dan penerjemahan strategi pasar; secara efektif mendesain sistem dan tata letak yang memaksimalkan keterbacaan dan komunikasi pesan.\r\n- Membuat desain yang unik dan menarik untuk mendukung kebutuhan divisi lain seperti team sales,team sosmed,dll.\r\n- Mampu menyelesaikan design corporate identity seperti logo dan marketing material seperti company profile, poster, brochures, dan lainnya'),
+(15, 'ANDROID DEVELOPER', 1, 'photo_2019-01-30_14-12-52.jpg', 'DESCRIPTION\r\n\r\n- Menguasai pemrograman aplikasi Android native menggunakan Java & Kotlin\r\n- Menguasai Android Studio\r\n- Memahami XML, Android SDK, Firebase, MySQL, Google API, Material Design\r\n- Dapat menggunakan Git untuk kolaborasi tim\r\n- Mempunyai pemahaman yang baik mengenai konsep OOP, MVC, CRUD, OOAD dan\r\n- Design Patterns\r\n- Dapat menulis kode program dengan rapi dan terstruktur serta terdokumentasi\r\n- Dapat membuat dokumentasi teknis'),
+(16, 'NETWORK ENGINER', 2, 'photo_2019-01-30_14-11-18.jpg', 'DESCRIPTION\r\n\r\n- Merancang dan mengimplementasikan solusi jaringan baru dan / atau meningkatkan efisiensi jaringan saat ini\r\n- Pasang, konfigurasikan, dan dukung peralatan jaringan termasuk router, server proxy, sakelar, akselerator WAN, DNS dan DHCP\r\n-Menyediakan peralatan jaringan dan mengelola subkontraktor yang terlibat dengan pemasangan jaringan\r\n- Mengkonfigurasi firewall, perutean, dan pengalihan untuk memaksimalkan efisiensi dan keamanan jaringan\r\n- Mengoptimalkan kinerja jaringan melalui pemantauan dan pemecahan masalah yang sedang berlangsung\r\n- Atur peningkatan terjadwal\r\n- Selidiki kesalahan dalam sistem jaringan\r\n- Monitor dan perbarui peralatan jaringan ke rilis firmware terbaru\r\n- Kumpulkan status jaringan dan laporkan ke pemangku kepentingan utama'),
+(17, 'DATABASE ADMINISTRATOR', 3, 'photo_2019-01-30_14-13-03.jpg', 'Jihan Octavia, [30.01.19 14:50]\r\nDESCRIPTION\r\n\r\n- Merancang dan membangun sistem manajemen basis data\r\n- Menyiapkan dan menguji basis data baru dan sistem penanganan data\r\n- Memantau dan mengevaluasi efisiensi basis data\r\n- Mempertahankan keamanan dan integritas data\r\n- Mengoptimalkan kinerja jaringan melalui pemantauan dan pemecahan masalah yang sedang berlangsung\r\n- Mengawasi pengembangan database baru\r\n- Membuat dan mengoptimalkan definisi kueri kompleks yang memungkinkan data diekstraksi\r\n- Melatih rekan kerja tentang cara memasukkan dan mengekstrak data\r\n- Mengidentifikasi pertanyaan lambat dan menyarankan alternatif');
 
 -- --------------------------------------------------------
 
@@ -788,22 +840,35 @@ CREATE TABLE `siswa_magang` (
   `nama` varchar(55) NOT NULL,
   `email` varchar(25) NOT NULL,
   `jurusan` varchar(25) NOT NULL,
-  `nama_sekolah` varchar(45) NOT NULL,
+  `nama_instansi` varchar(45) NOT NULL,
   `semester` int(8) NOT NULL,
   `alamat` varchar(100) NOT NULL,
-  `provinsi` varchar(55) NOT NULL,
-  `kota` varchar(55) NOT NULL,
-  `kabupaten` varchar(25) NOT NULL,
-  `alamat_magang` varchar(100) NOT NULL,
-  `tempat_lahir` varchar(25) NOT NULL,
-  `tanggal_lahir` date NOT NULL,
-  `foto` varchar(100) NOT NULL,
-  `jenis_kelamin` varchar(15) NOT NULL,
   `no_hp` varchar(12) NOT NULL,
+  `tempat_lahir` varchar(25) NOT NULL,
+  `tanggal_lahir` varchar(45) NOT NULL,
   `username` varchar(45) NOT NULL,
   `password` text NOT NULL,
-  `fk_id_pendamping` int(11) NOT NULL
+  `jenis_kelamin` varchar(15) NOT NULL,
+  `foto` varchar(100) NOT NULL,
+  `fk_id_pendamping` int(11) DEFAULT NULL,
+  `fk_posisi_magang` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `siswa_magang`
+--
+
+INSERT INTO `siswa_magang` (`id_siswa`, `nim_nisn`, `nama`, `email`, `jurusan`, `nama_instansi`, `semester`, `alamat`, `no_hp`, `tempat_lahir`, `tanggal_lahir`, `username`, `password`, `jenis_kelamin`, `foto`, `fk_id_pendamping`, `fk_posisi_magang`) VALUES
+(5, '1641729100', 'andre ptayoga', 'andre@gmail.com', 'TI', 'poltek', 2, 'jjogja', '1231414141', 'jogja', '2019-01-10', 'andre', 'andre', 'laki_laki', 'AhVKSrVCAAAWZWJ4.jpg', NULL, 0),
+(6, '12', 'Guntur Tegar', 'tegar8797@gmail.com', 'IT', 'Poltek ', 6, 'Jln. Saxofone', '434434443', 'jogja', '2019-01-15', 'gunturtegar', '1212', 'laki_laki', 'me11.jpg', NULL, 0),
+(7, '12', 'Guntur Tegar', 'tegar8797@gmail.com', 'IT', 'Poltek ', 6, 'Jln. Saxofone', '434434443', 'jogja', '2019-01-15', 'gunturtegar', '1212', 'laki_laki', 'me12.jpg', NULL, 0),
+(8, '12', 'Guntur Tegar', 'tegar8797@gmail.com', 'IT', 'Poltek ', 6, 'Jln. Saxofone', '434434443', 'jogja', '2019-01-15', 'gunturtegar', 'qwqqwqw', 'laki_laki', 'AhVKSrVCAAAWZWJ5.jpg', NULL, 0),
+(11, '1641720175', 'jihan', 'jihan@g.com', 'elektro', 'poltek', 4, 'malang', '098765632', 'pasuruan', '2019-01-10', 'jihan', 'jihan', 'laki_laki', 'photo_2019-01-30_14-11-182.jpg', NULL, 12),
+(12, '16417201722', 'jihan', 'aldansorry@gmail.com', 'TI', 'cvbnm', 6, 'malang', '1233444444', 'mlg', '2019-01-11', 'xxf', 'fdg', 'perempuan', 'photo_2019-01-30_14-11-184.jpg', NULL, 12),
+(13, '16417201722', 'tholib subechan', 'jelita@gmail.com', 'elektro', 'poltek', 6, 'jl. saxofone', '1233444444', '1101', '2019-01-18', 'andre', '12', 'Perempuan', '1_1.PNG', 1, 14),
+(14, '1641720088', 'sadfggfgfdgdg', 'aldansorry@gmail.com', 'fdgggfgdgfd', 'fdgfdgfgdgd', 3, 'dgfdgfdggfdd', '678545678675', 'sdfghmhggfghfg', '2019-02-08', 'fdghdfgfghg', 'efsgrhgfghjgj', 'perempuan', '1_4.PNG', NULL, 16),
+(15, '1641720088', 'Jihan ', 'jihan@gmail.com', 'to', 'poltek', 6, 'malang', '081342776551', 'malang', '1997-10-23', 'jihanoctavia', '123', 'perempuan', 'yey.jpg', NULL, 13),
+(16, '16417201722', 'tholib subechan', 'tholib@gmail.com', 'TI', 'politeknik', 6, 'malang', '08576543', 'malang', '2019-02-09', 'aan', 'aan', 'laki_laki', 'pay.jpg', NULL, 13);
 
 -- --------------------------------------------------------
 
@@ -935,12 +1000,10 @@ ALTER TABLE `bulan`
   ADD PRIMARY KEY (`id_bulan`);
 
 --
--- Indexes for table `divisi`
+-- Indexes for table `divisi_magang`
 --
-ALTER TABLE `divisi`
-  ADD PRIMARY KEY (`id_divisi`),
-  ADD KEY `fk_id_pendamping` (`fk_id_pendamping`),
-  ADD KEY `fk_id_siswa` (`fk_id_siswa`);
+ALTER TABLE `divisi_magang`
+  ADD PRIMARY KEY (`id_divisi`);
 
 --
 -- Indexes for table `kegiatan_magang`
@@ -961,6 +1024,12 @@ ALTER TABLE `komentar`
 ALTER TABLE `kota`
   ADD PRIMARY KEY (`id_kota`),
   ADD KEY `fk_id_provinsi` (`fk_id_provinsi`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `nama_instansi`
@@ -994,7 +1063,8 @@ ALTER TABLE `provinsi`
 --
 ALTER TABLE `siswa_magang`
   ADD PRIMARY KEY (`id_siswa`),
-  ADD KEY `fk_id_pendamping` (`fk_id_pendamping`);
+  ADD KEY `fk_id_pendamping` (`fk_id_pendamping`),
+  ADD KEY `fk_posisi_magang` (`fk_posisi_magang`);
 
 --
 -- Indexes for table `status_level`
@@ -1023,72 +1093,92 @@ ALTER TABLE `tanggal`
 -- AUTO_INCREMENT for table `absensi`
 --
 ALTER TABLE `absensi`
-  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `administrator`
 --
 ALTER TABLE `administrator`
   MODIFY `id_administrator` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `bulan`
 --
 ALTER TABLE `bulan`
   MODIFY `id_bulan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
--- AUTO_INCREMENT for table `divisi`
+-- AUTO_INCREMENT for table `divisi_magang`
 --
-ALTER TABLE `divisi`
-  MODIFY `id_divisi` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `divisi_magang`
+  MODIFY `id_divisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `kegiatan_magang`
 --
 ALTER TABLE `kegiatan_magang`
   MODIFY `id_kegiatan` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `kota`
 --
 ALTER TABLE `kota`
   MODIFY `id_kota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9472;
+
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `nama_instansi`
 --
 ALTER TABLE `nama_instansi`
-  MODIFY `id_instansi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_instansi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `pendamping_magang`
 --
 ALTER TABLE `pendamping_magang`
-  MODIFY `id_pendamping` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_pendamping` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `posisi_magang`
 --
 ALTER TABLE `posisi_magang`
-  MODIFY `id_posisi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_posisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
 --
 -- AUTO_INCREMENT for table `provinsi`
 --
 ALTER TABLE `provinsi`
   MODIFY `id_provinsi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+
 --
 -- AUTO_INCREMENT for table `siswa_magang`
 --
 ALTER TABLE `siswa_magang`
-  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
 --
 -- AUTO_INCREMENT for table `status_level`
 --
 ALTER TABLE `status_level`
   MODIFY `id_level` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `tahun`
 --
 ALTER TABLE `tahun`
   MODIFY `id_tahun` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
 --
 -- AUTO_INCREMENT for table `tanggal`
 --
 ALTER TABLE `tanggal`
   MODIFY `id_date` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
@@ -1104,13 +1194,6 @@ ALTER TABLE `absensi`
 --
 ALTER TABLE `administrator`
   ADD CONSTRAINT `administrator_ibfk_1` FOREIGN KEY (`fk_id_level`) REFERENCES `status_level` (`level`);
-
---
--- Ketidakleluasaan untuk tabel `divisi`
---
-ALTER TABLE `divisi`
-  ADD CONSTRAINT `divisi_ibfk_1` FOREIGN KEY (`fk_id_pendamping`) REFERENCES `pendamping_magang` (`id_pendamping`),
-  ADD CONSTRAINT `divisi_ibfk_2` FOREIGN KEY (`fk_id_siswa`) REFERENCES `siswa_magang` (`id_siswa`);
 
 --
 -- Ketidakleluasaan untuk tabel `kegiatan_magang`

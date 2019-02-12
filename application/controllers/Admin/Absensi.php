@@ -17,6 +17,13 @@ class Absensi extends CI_Controller {
 		$this->load->view('admin/absensi/index',$data);
 		$this->load->view('admin/absensi/template/footer');
 	}
+	public function report($id_siswa)
+	{
+		$data['data'] = $this->AbsensiModel->get_report_siswa($id_siswa);
+		$this->load->view('admin/absensi/template/header');
+		$this->load->view('admin/absensi/report',$data);
+		$this->load->view('admin/absensi/template/footer');
+	}
 	public function insert()
 	{
 		$this->form_validation->set_error_delimiters('<p class="text-danger">','</p');

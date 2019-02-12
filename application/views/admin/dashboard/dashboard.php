@@ -9,8 +9,7 @@
                     <i class="material-icons">person</i>
                   </div>
                   <p class="card-category">Siswa Magang</p>
-                  <h3 class="card-title">49/50
-                    <small>GB</small>
+                  <h3 class="card-title"><?= $this->db->get('siswa_magang')->num_rows() ?>
                   </h3>
                 </div>
                 <div class="card-footer">
@@ -28,7 +27,7 @@
                     <i class="material-icons">account_balance</i>
                   </div>
                   <p class="card-category">Divisi</p>
-                  <h3 class="card-title">$34,245</h3>
+                  <h3 class="card-title"><?= $this->db->get('divisi_magang')->num_rows() ?></h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
@@ -44,7 +43,7 @@
                     <i class="material-icons">verified_user</i>
                   </div>
                   <p class="card-category">Administrator</p>
-                  <h3 class="card-title">75</h3>
+                  <h3 class="card-title"><?= $this->db->get('administrator')->num_rows() ?></h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
@@ -60,7 +59,7 @@
                     <i class="material-icons">assignment_ind</i>
                   </div>
                   <p class="card-category">Pendamping</p>
-                  <h3 class="card-title">+245</h3>
+                  <h3 class="card-title"><?= $this->db->get('pendamping_magang')->num_rows() ?></h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
@@ -72,7 +71,7 @@
           </div>
           <div class="row">
             <div class="col-lg-6 col-md-12">
-              <div class="card">
+              <!-- <div class="card">
                 <div class="card-header card-header-tabs card-header-primary">
                   <div class="nav-tabs-navigation">
                     <div class="nav-tabs-wrapper">
@@ -314,7 +313,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="col-md-6">
               <div class="card card-profile">
@@ -324,7 +323,7 @@
                   </div>
                   <div class="card-body">
                     <h6 class="card-category text-gray">SUPER ADMIN</h6>
-                    <h4 class="card-title">BjongNgopi</h4>
+                    <h4 class="card-title"><?= $this->session->userdata('logged_in')['nama'] ?></h4>
                   <p class="card-description">
                     Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
                   </p>

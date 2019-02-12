@@ -27,7 +27,7 @@
               <div class="form-group">
                 <label class="bmd-label-floating">Pulang</label>
                 <div class="input-group clockpicker">
-                  <input type="text" class="form-control" value="<?php echo $absensi->datang ?>" name="pulang">
+                  <input type="text" class="form-control" value="<?php echo $absensi->pulang ?>" name="pulang">
                   <span class="input-group-addon">
                     <!-- <span class="glyphicon glyphicon-time"></span> -->
                   </span>

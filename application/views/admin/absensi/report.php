@@ -1,4 +1,6 @@
 <?php $c_name = "Absensi" ?>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css">
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
@@ -12,15 +14,12 @@
                   <p class="card-category">Untuk mencatat kehadiran siswa setiap hari</p>
                   </div>
                   <div class="col-xs-2">
-                    <a href="<?= base_url('index.php/Admin/Absensi/insert') ?>" rel="tooltip" title="Tambah Data" class="btn btn-secondary">
-                      <i class="material-icons">add_box</i>
-                    </a>
                   </div>
                 </div>
               </div>
                 <div class="card-body">
                   <div class="table-responsive">
-                    <table class="table">
+                    <table class="table" id="table-export">
                       <thead class=" text-rose">
                         <th>ID.</th>
                         <th>Tanggal</th>
@@ -29,7 +28,6 @@
                         <th>Aktivitas</th>
                         <th>Keterangan</th>
                         <th>Siswa</th>
-                        <th></th>
                       </thead>
                       <tbody>
                         <?php foreach ($data as $key => $value): ?>
@@ -40,14 +38,7 @@
                             <td><?php echo $value->pulang ?></td>
                             <td><?php echo $value->aktivitas ?></td>
                             <td><?php echo $value->keterangan ?></td>
-                            <td><?php echo $value->nama_siswa ?></td>
-
-                            <td>
-                              <a class="btn btn-sm btn-warning" href="<?php echo site_url("Admin/".$c_name."/update/".$value->id_absensi) ?>" rel="tooltip" title="Edit"><i class="material-icons">edit</i></a>
-                              <a href="<?php echo site_url("Admin/".$c_name."/delete/".$value->id_absensi) ?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-sm btn-danger" rel="tooltip" title="Delete">
-                                <i class="material-icons">delete</i>
-                              </a>
-                            </td>
+                            <td><?php echo $value->fk_id_siswa ?></td>
                           </tr>
                           <?php endforeach ?>
                       </tbody>
@@ -60,3 +51,22 @@
           </div>
         </div>
       </div>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.flash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#table-export').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+          'excel', 'pdf', 'print'
+        ]
+    } );
+} );
+</script>

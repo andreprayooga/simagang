@@ -41,62 +41,15 @@
     </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item ">
-            <a class="nav-link" href="<?= base_url('index.php/Admin/Sekolah') ?>">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
-            </a>
-          </li>
           <li class="nav-item active">
-            <a class="nav-link" href="<?= base_url('index.php/Admin/Absensi') ?>">
+            <a class="nav-link" href="<?= base_url('index.php/Home/siswa_magang') ?>">
               <i class="material-icons">content_paste</i>
               <p>Absensi</p>
             </a>
           </li>
+          
           <li class="nav-item ">
-            <a class="nav-link" href="<?= base_url('index.php/Admin/Administrator') ?>">
-              <i class="material-icons">assignment_ind</i>
-              <p>Administrator</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="<?= base_url('index.php/Admin/Divisi') ?>">
-              <i class="material-icons">group_work</i>
-              <p>Divisi</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="<?= base_url('index.php/Admin/Komentar') ?>">
-              <i class="material-icons">chat</i>
-              <p>Komentar</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="<?= base_url('index.php/Admin/NamaInstansi') ?>">
-              <i class="material-icons">school</i>
-              <p>Nama Instansi Pendidikan</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="<?= base_url('index.php/Admin/PendampingMagang') ?>">
-              <i class="material-icons">verified_user</i>
-              <p>Pendamping</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="<?= base_url('index.php/Admin/Posisi') ?>">
-              <i class="material-icons">rv_hookup</i>
-              <p>Posisi</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="<?= base_url('index.php/Admin/SiswaMagang') ?>">
-              <i class="material-icons">people</i>
-              <p>Siswa Magang</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="<?= base_url('index.php/Admin/') ?>">
+            <a class="nav-link" href="<?= base_url('index.php/Login/logout') ?>">
               <i class="material-icons">assignment_return</i>
               <p>Logout</p>
             </a>

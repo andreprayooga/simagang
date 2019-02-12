@@ -3,8 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class AbsensiModel extends CI_Model {
 	public function get()
 	{
-		$this->db->select("absensi.*");
+		$this->db->select("absensi.*,(select nama from siswa_magang where id_siswa=absensi.fk_id_siswa) as nama_siswa");
 		$this->db->order_by('tanggal','desc');
+		return $this->db->get('absensi')->result();
+	}
+	public function get_report_siswa($id_siswa)
+	{
+		$this->db->select("absensi.*,(select nama from siswa_magang where id_siswa=absensi.fk_id_siswa) as nama_siswa");
+		$this->db->order_by('tanggal','desc');
+		$this->db->where('fk_id_siswa',$id_siswa);
 		return $this->db->get('absensi')->result();
 	}
 	public function get_id($id)

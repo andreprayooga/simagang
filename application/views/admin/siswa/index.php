@@ -43,7 +43,7 @@
                           <td><?php echo $value->no_hp ?></td>
                           <td><?php echo $value->jenis_kelamin ?></td>
                           <td>
-                            <a class="btn btn-sm btn-success" href="#" rel="tooltip" title="Detail"><i class="material-icons">zoom_out_map</i></a>
+                            <a class="btn btn-sm btn-success" href="<?php echo site_url('Admin/Absensi/report/'.$value->id_siswa) ?>" rel="tooltip" title="Report"><i class="material-icons">zoom_out_map</i></a>
                             <a class="btn btn-sm btn-warning" href="<?php echo site_url("Admin/".$c_name."/update/".$value->id_siswa) ?>"  rel="tooltip" title="Edit"><i class="material-icons">edit</i></a>
                             <a href="<?php echo site_url("Admin/".$c_name."/delete/".$value->id_siswa) ?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-sm btn-danger"  rel="tooltip" title="Hapus"><i class="material-icons">delete</i></a>
                           </td>
